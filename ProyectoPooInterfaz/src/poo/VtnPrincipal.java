@@ -233,7 +233,7 @@ public class VtnPrincipal extends javax.swing.JFrame
         listDescripcionAdmin.setForeground(new java.awt.Color(178, 169, 169));
         listDescripcionAdmin.setModel(new javax.swing.AbstractListModel<String>()
         {
-            String[] strings = { "-Regitro grupos", "-Modificar/Editar", "-Consulta de aluimnos" };
+            String[] strings = { "-Regitro grupos", "-Modificar/Editar", "-Consulta de aluimnos", "-Eliminar" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -268,7 +268,7 @@ public class VtnPrincipal extends javax.swing.JFrame
         listDescripcionRegistro.setBorder(null);
         listDescripcionRegistro.setModel(new javax.swing.AbstractListModel<String>()
         {
-            String[] strings = { "-Registro de almno", "-Consulta alumnos" };
+            String[] strings = { "-Registro de almno", "-Consultar alumno" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
