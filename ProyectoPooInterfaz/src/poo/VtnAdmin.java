@@ -328,7 +328,6 @@ public class VtnAdmin extends javax.swing.JFrame {
         b = false;
         banderAzul = false;
         banderAzul1 = false;
-        banderAzul2 = false;
         if (!banderAzul1) {
             pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
             lbGrupos.setForeground(Color.white);
@@ -395,7 +394,6 @@ public class VtnAdmin extends javax.swing.JFrame {
         b = false;
         banderAzul = false;
         banderAzul1 = false;
-        banderAzul2 = false;
         if (!banderAzul1) {
             pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
             lbGrupos.setForeground(Color.white);
@@ -409,7 +407,6 @@ public class VtnAdmin extends javax.swing.JFrame {
         b = false;
         banderAzul = false;
         banderAzul1 = false;
-        banderAzul2 = false;
         if (!banderAzul1) {
             pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
             lbGrupos.setForeground(Color.white);
@@ -439,7 +436,6 @@ public class VtnAdmin extends javax.swing.JFrame {
         b = false;
         banderAzul = false;
         banderAzul1 = false;
-        banderAzul2 = false;
         if (!banderAzul1) {
             pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
             lbGrupos.setForeground(Color.white);
@@ -464,7 +460,7 @@ public class VtnAdmin extends javax.swing.JFrame {
             b = true;
             banderAzul = true;
             banderAzul1 = true;
-            banderAzul2 = true;
+            
         } else {
             pnlVista.setBackground(Color.white);
             lblVista.setForeground(Color.black);
@@ -472,7 +468,7 @@ public class VtnAdmin extends javax.swing.JFrame {
             b = false;
             banderAzul = false;
             banderAzul1 = false;
-            banderAzul2 = false;
+            
             if (!banderAzul1) {
                 pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
                 lbGrupos.setForeground(Color.white);
