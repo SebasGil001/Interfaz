@@ -10,8 +10,7 @@ import java.awt.Color;
  *
  * @author gerar
  */
-public class VtnAdmin extends javax.swing.JFrame
-{
+public class VtnAdmin extends javax.swing.JFrame {
 
     boolean b = false;
     boolean banderAzul = false;
@@ -21,8 +20,7 @@ public class VtnAdmin extends javax.swing.JFrame
     /**
      * Creates new form VtnGruposAlumnos
      */
-    public VtnAdmin()
-    {
+    public VtnAdmin() {
         initComponents();
     }
 
@@ -33,16 +31,15 @@ public class VtnAdmin extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         panelRaiz = new javax.swing.JPanel();
         pnlMenu = new javax.swing.JPanel();
         pnlVista = new javax.swing.JPanel();
         lblVista = new javax.swing.JLabel();
-        pnlGrupos = new javax.swing.JPanel();
-        lblAlumnos = new javax.swing.JLabel();
         pnlAlumnos = new javax.swing.JPanel();
+        lblAlumnos = new javax.swing.JLabel();
+        pnlGrupos = new javax.swing.JPanel();
         lbGrupos = new javax.swing.JLabel();
         pnlSecundario = new javax.swing.JPanel();
         pnlRadioButton = new javax.swing.JPanel();
@@ -57,19 +54,15 @@ public class VtnAdmin extends javax.swing.JFrame
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
         setType(java.awt.Window.Type.POPUP);
-        addWindowListener(new java.awt.event.WindowAdapter()
-        {
-            public void windowOpened(java.awt.event.WindowEvent evt)
-            {
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
 
         panelRaiz.setBackground(new java.awt.Color(255, 255, 255));
-        panelRaiz.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        panelRaiz.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 panelRaizMouseClicked(evt);
             }
         });
@@ -79,25 +72,32 @@ public class VtnAdmin extends javax.swing.JFrame
         pnlMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlVista.setBackground(new java.awt.Color(255, 255, 255));
+        pnlVista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlVista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlVistaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlVistaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlVistaMouseExited(evt);
+            }
+        });
         pnlVista.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblVista.setBackground(new java.awt.Color(255, 255, 255));
         lblVista.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblVista.setText("Vista...");
         lblVista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblVista.setOpaque(true);
-        lblVista.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lblVista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblVistaMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblVistaMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblVistaMouseExited(evt);
             }
         });
@@ -105,54 +105,76 @@ public class VtnAdmin extends javax.swing.JFrame
 
         pnlMenu.add(pnlVista, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 0, 310, 40));
 
-        pnlGrupos.setBackground(new java.awt.Color(255, 255, 255));
-        pnlGrupos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlAlumnos.setBackground(new java.awt.Color(255, 255, 255));
+        pnlAlumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlAlumnos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlAlumnosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlAlumnosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlAlumnosMouseExited(evt);
+            }
+        });
+        pnlAlumnos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAlumnos.setBackground(new java.awt.Color(255, 255, 255));
         lblAlumnos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAlumnos.setText("Alumnos");
         lblAlumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblAlumnos.setOpaque(true);
         lblAlumnos.setPreferredSize(new java.awt.Dimension(34, 16));
-        lblAlumnos.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+        lblAlumnos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAlumnosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblAlumnosMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblAlumnosMouseExited(evt);
             }
         });
-        pnlGrupos.add(lblAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 70, 40));
+        pnlAlumnos.add(lblAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 70, 40));
 
-        pnlMenu.add(pnlGrupos, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 310, 40));
+        pnlMenu.add(pnlAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 310, 40));
 
-        pnlAlumnos.setBackground(new java.awt.Color(255, 255, 255));
-        pnlAlumnos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
+        pnlGrupos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlGrupos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlGruposMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlGruposMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlGruposMouseExited(evt);
+            }
+        });
+        pnlGrupos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbGrupos.setBackground(new java.awt.Color(0, 153, 255));
         lbGrupos.setForeground(new java.awt.Color(255, 255, 255));
         lbGrupos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbGrupos.setText("Grupos");
         lbGrupos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbGrupos.setOpaque(true);
         lbGrupos.setPreferredSize(new java.awt.Dimension(34, 16));
-        lbGrupos.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+        lbGrupos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbGruposMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbGruposMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbGruposMouseExited(evt);
             }
         });
-        pnlAlumnos.add(lbGrupos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 70, 40));
+        pnlGrupos.add(lbGrupos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 70, 40));
 
-        pnlMenu.add(pnlAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 40));
+        pnlMenu.add(pnlGrupos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 40));
 
         panelRaiz.add(pnlMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 40));
 
@@ -164,10 +186,8 @@ public class VtnAdmin extends javax.swing.JFrame
         pnlRadioButton.setLayout(new java.awt.GridLayout(2, 0));
 
         checkBoxArbol.setText("Ver en arbol");
-        checkBoxArbol.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        checkBoxArbol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkBoxArbolActionPerformed(evt);
             }
         });
@@ -175,10 +195,8 @@ public class VtnAdmin extends javax.swing.JFrame
 
         chechBoxTabla.setSelected(true);
         chechBoxTabla.setText("Ver en tabla");
-        chechBoxTabla.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        chechBoxTabla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chechBoxTablaActionPerformed(evt);
             }
         });
@@ -223,10 +241,8 @@ public class VtnAdmin extends javax.swing.JFrame
         treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
         jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jTree1.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        jTree1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTree1MouseClicked(evt);
             }
         });
@@ -267,53 +283,38 @@ public class VtnAdmin extends javax.swing.JFrame
         //lblTitulo.setText("Administración");
     }//GEN-LAST:event_formWindowOpened
 
-    private void lbGruposMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbGruposMouseEntered
-    {//GEN-HEADEREND:event_lbGruposMouseEntered
-        if (banderAzul1 == false)
-        {
-
-        } else
-        {
-            lbGrupos.setBackground(new java.awt.Color(242, 242, 242));
-        }
-
-    }//GEN-LAST:event_lbGruposMouseEntered
-
     private void lbGruposMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbGruposMouseExited
     {//GEN-HEADEREND:event_lbGruposMouseExited
-        if (banderAzul1 == false)
-        {
+        if (banderAzul1 == false) {
 
-        } else
-        {
-            lbGrupos.setBackground(Color.white);
+        } else {
+            pnlGrupos.setBackground(Color.white);
         }
 
     }//GEN-LAST:event_lbGruposMouseExited
 
     private void lblVistaMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblVistaMouseClicked
     {//GEN-HEADEREND:event_lblVistaMouseClicked
-        if (b == false)
-        {
-            lbGrupos.setBackground(Color.white);
+        if (b == false) {
+            pnlGrupos.setBackground(Color.white);
             lbGrupos.setForeground(Color.black);
-            lblVista.setBackground(new java.awt.Color(0, 153, 255));
+            pnlVista.setBackground(new java.awt.Color(0, 153, 255));
             lblVista.setForeground(Color.white);
             pnlRadioButton.setVisible(true);
             b = true;
             banderAzul = true;
             banderAzul1 = true;
-        } else
-        {
-            lblVista.setBackground(Color.white);
+            //banderAzul2 = true;
+        } else {
+            pnlVista.setBackground(Color.white);
             lblVista.setForeground(Color.black);
             pnlRadioButton.setVisible(false);
             b = false;
             banderAzul = false;
             banderAzul1 = false;
-            if (!banderAzul1)
-            {
-                lbGrupos.setBackground(new java.awt.Color(0, 153, 255));
+            //banderAzul2 = false;
+            if (!banderAzul1) {
+                pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
                 lbGrupos.setForeground(Color.white);
             }
         }
@@ -321,50 +322,55 @@ public class VtnAdmin extends javax.swing.JFrame
 
     private void panelRaizMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_panelRaizMouseClicked
     {//GEN-HEADEREND:event_panelRaizMouseClicked
-        lblVista.setBackground(Color.white);
+        pnlVista.setBackground(Color.white);
         lblVista.setForeground(Color.black);
         pnlRadioButton.setVisible(false);
         b = false;
         banderAzul = false;
         banderAzul1 = false;
-        if (!banderAzul1)
-        {
-            lbGrupos.setBackground(new java.awt.Color(0, 153, 255));
+        banderAzul2 = false;
+        if (!banderAzul1) {
+            pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
             lbGrupos.setForeground(Color.white);
         }
     }//GEN-LAST:event_panelRaizMouseClicked
 
     private void lblVistaMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblVistaMouseEntered
     {//GEN-HEADEREND:event_lblVistaMouseEntered
-        if (banderAzul == true)
-        {
-            lblVista.setBackground(new java.awt.Color(0, 153, 255));
-        } else
-        {
-            lblVista.setBackground(new java.awt.Color(242, 242, 242));
+        if (banderAzul == true) {
+            pnlVista.setBackground(new java.awt.Color(0, 153, 255));
+        } else {
+            pnlVista.setBackground(new java.awt.Color(242, 242, 242));
         }
     }//GEN-LAST:event_lblVistaMouseEntered
 
     private void lblVistaMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblVistaMouseExited
     {//GEN-HEADEREND:event_lblVistaMouseExited
 
-        if (banderAzul == true)
-        {
-            lblVista.setBackground(new java.awt.Color(0, 153, 255));
-        } else
-        {
-            lblVista.setBackground(Color.white);
+        if (banderAzul == true) {
+            pnlVista.setBackground(new java.awt.Color(0, 153, 255));
+        } else {
+            pnlVista.setBackground(Color.white);
         }
     }//GEN-LAST:event_lblVistaMouseExited
 
     private void lblAlumnosMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblAlumnosMouseEntered
     {//GEN-HEADEREND:event_lblAlumnosMouseEntered
-        lblAlumnos.setBackground(new java.awt.Color(242, 242, 242));
+        if (banderAzul2 == true) {
+
+            pnlAlumnos.setBackground(new java.awt.Color(0, 153, 255));
+        } else {
+            pnlAlumnos.setBackground(new java.awt.Color(242, 242, 242));
+        }
     }//GEN-LAST:event_lblAlumnosMouseEntered
 
     private void lblAlumnosMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblAlumnosMouseExited
     {//GEN-HEADEREND:event_lblAlumnosMouseExited
-        lblAlumnos.setBackground(Color.white);
+        if (banderAzul2 == true) {
+            pnlAlumnos.setBackground(new java.awt.Color(0, 153, 255));
+        } else {
+            pnlAlumnos.setBackground(Color.white);
+        }
     }//GEN-LAST:event_lblAlumnosMouseExited
 
     private void checkBoxArbolActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_checkBoxArbolActionPerformed
@@ -383,50 +389,185 @@ public class VtnAdmin extends javax.swing.JFrame
 
     private void jTree1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jTree1MouseClicked
     {//GEN-HEADEREND:event_jTree1MouseClicked
-        lblVista.setBackground(Color.white);
+        pnlVista.setBackground(Color.white);
         lblVista.setForeground(Color.black);
         pnlRadioButton.setVisible(false);
         b = false;
         banderAzul = false;
         banderAzul1 = false;
-        if (!banderAzul1)
-        {
-            lbGrupos.setBackground(new java.awt.Color(0, 153, 255));
+        banderAzul2 = false;
+        if (!banderAzul1) {
+            pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
             lbGrupos.setForeground(Color.white);
         }
     }//GEN-LAST:event_jTree1MouseClicked
 
+    private void pnlGruposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGruposMouseClicked
+        pnlVista.setBackground(Color.white);
+        lblVista.setForeground(Color.black);
+        pnlRadioButton.setVisible(false);
+        b = false;
+        banderAzul = false;
+        banderAzul1 = false;
+        banderAzul2 = false;
+        if (!banderAzul1) {
+            pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
+            lbGrupos.setForeground(Color.white);
+        }
+    }//GEN-LAST:event_pnlGruposMouseClicked
+
+    private void pnlGruposMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGruposMouseEntered
+        if (banderAzul1 == false) {
+
+        } else {
+            pnlGrupos.setBackground(new java.awt.Color(242, 242, 242));
+        }
+    }//GEN-LAST:event_pnlGruposMouseEntered
+
+    private void lbGruposMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbGruposMouseEntered
+        if (banderAzul1 == false) {
+
+        } else {
+            pnlGrupos.setBackground(new java.awt.Color(242, 242, 242));
+        }
+    }//GEN-LAST:event_lbGruposMouseEntered
+
+    private void lbGruposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbGruposMouseClicked
+        pnlVista.setBackground(Color.white);
+        lblVista.setForeground(Color.black);
+        pnlRadioButton.setVisible(false);
+        b = false;
+        banderAzul = false;
+        banderAzul1 = false;
+        banderAzul2 = false;
+        if (!banderAzul1) {
+            pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
+            lbGrupos.setForeground(Color.white);
+        }
+    }//GEN-LAST:event_lbGruposMouseClicked
+
+    private void pnlGruposMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGruposMouseExited
+        if (banderAzul1 == false) {
+
+        } else {
+            pnlGrupos.setBackground(Color.white);
+        }
+    }//GEN-LAST:event_pnlGruposMouseExited
+
+    private void pnlVistaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlVistaMouseClicked
+        if (b == false) {
+            pnlGrupos.setBackground(Color.white);
+            lbGrupos.setForeground(Color.black);
+            pnlVista.setBackground(new java.awt.Color(0, 153, 255));
+            lblVista.setForeground(Color.white);
+            pnlRadioButton.setVisible(true);
+            b = true;
+            banderAzul = true;
+            banderAzul1 = true;
+            banderAzul2 = true;
+        } else {
+            pnlVista.setBackground(Color.white);
+            lblVista.setForeground(Color.black);
+            pnlRadioButton.setVisible(false);
+            b = false;
+            banderAzul = false;
+            banderAzul1 = false;
+            banderAzul2 = false;
+            if (!banderAzul1) {
+                pnlGrupos.setBackground(new java.awt.Color(0, 153, 255));
+                lbGrupos.setForeground(Color.white);
+            }
+        }
+    }//GEN-LAST:event_pnlVistaMouseClicked
+
+    private void pnlVistaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlVistaMouseEntered
+        if (banderAzul == true) {
+            pnlVista.setBackground(new java.awt.Color(0, 153, 255));
+        } else {
+            pnlVista.setBackground(new java.awt.Color(242, 242, 242));
+        }
+    }//GEN-LAST:event_pnlVistaMouseEntered
+
+    private void pnlVistaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlVistaMouseExited
+        if (banderAzul == true) {
+            pnlVista.setBackground(new java.awt.Color(0, 153, 255));
+        } else {
+            pnlVista.setBackground(Color.white);
+        }
+    }//GEN-LAST:event_pnlVistaMouseExited
+
+    private void pnlAlumnosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAlumnosMouseEntered
+        if (banderAzul2 == true) {
+
+            pnlAlumnos.setBackground(new java.awt.Color(0, 153, 255));
+        } else {
+            pnlAlumnos.setBackground(new java.awt.Color(242, 242, 242));
+        }
+    }//GEN-LAST:event_pnlAlumnosMouseEntered
+
+    private void pnlAlumnosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAlumnosMouseClicked
+        pnlVista.setBackground(Color.white);
+        lblVista.setForeground(Color.black);
+        pnlGrupos.setBackground(Color.white);
+        lbGrupos.setForeground(Color.black);
+        pnlRadioButton.setVisible(false);
+        b = false;
+        banderAzul = false;
+        banderAzul1 = false;
+        banderAzul2 = false;
+        if (!banderAzul2) {
+            pnlAlumnos.setBackground(new java.awt.Color(0, 153, 255));
+            lblAlumnos.setForeground(Color.white);
+        }
+    }//GEN-LAST:event_pnlAlumnosMouseClicked
+
+    private void lblAlumnosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlumnosMouseClicked
+        pnlVista.setBackground(Color.white);
+        lblVista.setForeground(Color.black);
+        pnlGrupos.setBackground(Color.white);
+        lbGrupos.setForeground(Color.black);
+        pnlRadioButton.setVisible(false);
+        b = false;
+        banderAzul = false;
+        banderAzul1 = false;
+        banderAzul2 = false;
+        if (!banderAzul2 ) {
+            pnlAlumnos.setBackground(new java.awt.Color(0, 153, 255));
+            lblAlumnos.setForeground(Color.white);
+        }
+    }//GEN-LAST:event_lblAlumnosMouseClicked
+
+    private void pnlAlumnosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAlumnosMouseExited
+        if (banderAzul2 == true) {
+            pnlAlumnos.setBackground(new java.awt.Color(0, 153, 255));
+        } else {
+            pnlAlumnos.setBackground(Color.white);
+        }
+    }//GEN-LAST:event_pnlAlumnosMouseExited
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(VtnAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(VtnAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(VtnAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-        {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VtnAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -435,10 +576,8 @@ public class VtnAdmin extends javax.swing.JFrame
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
                 new VtnAdmin().setVisible(true);
             }
         });
