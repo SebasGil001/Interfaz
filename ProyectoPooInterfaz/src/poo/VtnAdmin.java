@@ -13,8 +13,11 @@ import java.awt.Color;
 public class VtnAdmin extends javax.swing.JFrame
 {
 
-    int xMouse;
-    int yMouse;
+    boolean b = false;
+    boolean banderAzul = false;
+    boolean banderAzul1 = false;
+    boolean banderAzul2 = false;
+
     /**
      * Creates new form VtnGruposAlumnos
      */
@@ -34,11 +37,26 @@ public class VtnAdmin extends javax.swing.JFrame
     {
 
         panelRaiz = new javax.swing.JPanel();
+        pnlMenu = new javax.swing.JPanel();
+        pnlVista = new javax.swing.JPanel();
+        lblVista = new javax.swing.JLabel();
+        pnlGrupos = new javax.swing.JPanel();
+        lblAlumnos = new javax.swing.JLabel();
+        pnlAlumnos = new javax.swing.JPanel();
+        lbGrupos = new javax.swing.JLabel();
+        pnlSecundario = new javax.swing.JPanel();
+        pnlRadioButton = new javax.swing.JPanel();
+        checkBoxArbol = new javax.swing.JCheckBox();
+        chechBoxTabla = new javax.swing.JCheckBox();
+        pnlArbol = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        jProgressBar1 = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Administración");
+        setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
-        setType(java.awt.Window.Type.UTILITY);
+        setType(java.awt.Window.Type.POPUP);
         addWindowListener(new java.awt.event.WindowAdapter()
         {
             public void windowOpened(java.awt.event.WindowEvent evt)
@@ -48,22 +66,182 @@ public class VtnAdmin extends javax.swing.JFrame
         });
 
         panelRaiz.setBackground(new java.awt.Color(255, 255, 255));
-        panelRaiz.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        panelRaiz.addMouseMotionListener(new java.awt.event.MouseMotionAdapter()
-        {
-            public void mouseDragged(java.awt.event.MouseEvent evt)
-            {
-                panelRaizMouseDragged(evt);
-            }
-        });
         panelRaiz.addMouseListener(new java.awt.event.MouseAdapter()
         {
-            public void mousePressed(java.awt.event.MouseEvent evt)
+            public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                panelRaizMousePressed(evt);
+                panelRaizMouseClicked(evt);
             }
         });
         panelRaiz.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlMenu.setBackground(new java.awt.Color(255, 255, 255));
+        pnlMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlVista.setBackground(new java.awt.Color(255, 255, 255));
+        pnlVista.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblVista.setBackground(new java.awt.Color(255, 255, 255));
+        lblVista.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblVista.setText("Vista...");
+        lblVista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblVista.setOpaque(true);
+        lblVista.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lblVistaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lblVistaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lblVistaMouseExited(evt);
+            }
+        });
+        pnlVista.add(lblVista, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 80, 40));
+
+        pnlMenu.add(pnlVista, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 0, 310, 40));
+
+        pnlGrupos.setBackground(new java.awt.Color(255, 255, 255));
+        pnlGrupos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblAlumnos.setBackground(new java.awt.Color(255, 255, 255));
+        lblAlumnos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAlumnos.setText("Alumnos");
+        lblAlumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblAlumnos.setOpaque(true);
+        lblAlumnos.setPreferredSize(new java.awt.Dimension(34, 16));
+        lblAlumnos.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lblAlumnosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lblAlumnosMouseExited(evt);
+            }
+        });
+        pnlGrupos.add(lblAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 70, 40));
+
+        pnlMenu.add(pnlGrupos, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 310, 40));
+
+        pnlAlumnos.setBackground(new java.awt.Color(255, 255, 255));
+        pnlAlumnos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbGrupos.setBackground(new java.awt.Color(0, 153, 255));
+        lbGrupos.setForeground(new java.awt.Color(255, 255, 255));
+        lbGrupos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbGrupos.setText("Grupos");
+        lbGrupos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbGrupos.setOpaque(true);
+        lbGrupos.setPreferredSize(new java.awt.Dimension(34, 16));
+        lbGrupos.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbGruposMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbGruposMouseExited(evt);
+            }
+        });
+        pnlAlumnos.add(lbGrupos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 70, 40));
+
+        pnlMenu.add(pnlAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 40));
+
+        panelRaiz.add(pnlMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 40));
+
+        pnlSecundario.setBackground(new java.awt.Color(255, 255, 255));
+        pnlSecundario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        pnlRadioButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlRadioButton.setLayout(new java.awt.GridLayout(2, 0));
+
+        checkBoxArbol.setText("Ver en arbol");
+        checkBoxArbol.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                checkBoxArbolActionPerformed(evt);
+            }
+        });
+        pnlRadioButton.add(checkBoxArbol);
+
+        chechBoxTabla.setSelected(true);
+        chechBoxTabla.setText("Ver en tabla");
+        chechBoxTabla.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                chechBoxTablaActionPerformed(evt);
+            }
+        });
+        pnlRadioButton.add(chechBoxTabla);
+
+        pnlSecundario.add(pnlRadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 0, 110, 40));
+        pnlRadioButton.setVisible(false);
+
+        pnlArbol.setBorder(null);
+        pnlArbol.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        jTree1.setForeground(new java.awt.Color(255, 255, 255));
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Alumnos");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("colors");
+        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("blue");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("violet");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("red");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("yellow");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("sports");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("basketball");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("soccer");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("football");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("hockey");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("food");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("hot dogs");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("pizza");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("ravioli");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("bananas");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jTree1.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                jTree1MouseClicked(evt);
+            }
+        });
+        pnlArbol.setViewportView(jTree1);
+        pnlArbol.setVisible(false);
+
+        pnlSecundario.add(pnlArbol, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 490));
+
+        panelRaiz.add(pnlSecundario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 930, 490));
+
+        jProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
+        jProgressBar1.setToolTipText("");
+        jProgressBar1.setBorder(null);
+        jProgressBar1.setOpaque(true);
+        panelRaiz.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 930, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,40 +249,152 @@ public class VtnAdmin extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 930, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panelRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 930, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(panelRaiz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 560, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(panelRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(panelRaiz, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void panelRaizMouseDragged(java.awt.event.MouseEvent evt)//GEN-FIRST:event_panelRaizMouseDragged
-    {//GEN-HEADEREND:event_panelRaizMouseDragged
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_panelRaizMouseDragged
-
-    private void panelRaizMousePressed(java.awt.event.MouseEvent evt)//GEN-FIRST:event_panelRaizMousePressed
-    {//GEN-HEADEREND:event_panelRaizMousePressed
-        xMouse = evt.getX();
-        yMouse = evt.getY();
-    }//GEN-LAST:event_panelRaizMousePressed
-
     private void formWindowOpened(java.awt.event.WindowEvent evt)//GEN-FIRST:event_formWindowOpened
     {//GEN-HEADEREND:event_formWindowOpened
         //lblTitulo.setText("Administración");
     }//GEN-LAST:event_formWindowOpened
+
+    private void lbGruposMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbGruposMouseEntered
+    {//GEN-HEADEREND:event_lbGruposMouseEntered
+        if (banderAzul1 == false)
+        {
+
+        } else
+        {
+            lbGrupos.setBackground(new java.awt.Color(242, 242, 242));
+        }
+
+    }//GEN-LAST:event_lbGruposMouseEntered
+
+    private void lbGruposMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbGruposMouseExited
+    {//GEN-HEADEREND:event_lbGruposMouseExited
+        if (banderAzul1 == false)
+        {
+
+        } else
+        {
+            lbGrupos.setBackground(Color.white);
+        }
+
+    }//GEN-LAST:event_lbGruposMouseExited
+
+    private void lblVistaMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblVistaMouseClicked
+    {//GEN-HEADEREND:event_lblVistaMouseClicked
+        if (b == false)
+        {
+            lbGrupos.setBackground(Color.white);
+            lbGrupos.setForeground(Color.black);
+            lblVista.setBackground(new java.awt.Color(0, 153, 255));
+            lblVista.setForeground(Color.white);
+            pnlRadioButton.setVisible(true);
+            b = true;
+            banderAzul = true;
+            banderAzul1 = true;
+        } else
+        {
+            lblVista.setBackground(Color.white);
+            lblVista.setForeground(Color.black);
+            pnlRadioButton.setVisible(false);
+            b = false;
+            banderAzul = false;
+            banderAzul1 = false;
+            if (!banderAzul1)
+            {
+                lbGrupos.setBackground(new java.awt.Color(0, 153, 255));
+                lbGrupos.setForeground(Color.white);
+            }
+        }
+    }//GEN-LAST:event_lblVistaMouseClicked
+
+    private void panelRaizMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_panelRaizMouseClicked
+    {//GEN-HEADEREND:event_panelRaizMouseClicked
+        lblVista.setBackground(Color.white);
+        lblVista.setForeground(Color.black);
+        pnlRadioButton.setVisible(false);
+        b = false;
+        banderAzul = false;
+        banderAzul1 = false;
+        if (!banderAzul1)
+        {
+            lbGrupos.setBackground(new java.awt.Color(0, 153, 255));
+            lbGrupos.setForeground(Color.white);
+        }
+    }//GEN-LAST:event_panelRaizMouseClicked
+
+    private void lblVistaMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblVistaMouseEntered
+    {//GEN-HEADEREND:event_lblVistaMouseEntered
+        if (banderAzul == true)
+        {
+            lblVista.setBackground(new java.awt.Color(0, 153, 255));
+        } else
+        {
+            lblVista.setBackground(new java.awt.Color(242, 242, 242));
+        }
+    }//GEN-LAST:event_lblVistaMouseEntered
+
+    private void lblVistaMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblVistaMouseExited
+    {//GEN-HEADEREND:event_lblVistaMouseExited
+
+        if (banderAzul == true)
+        {
+            lblVista.setBackground(new java.awt.Color(0, 153, 255));
+        } else
+        {
+            lblVista.setBackground(Color.white);
+        }
+    }//GEN-LAST:event_lblVistaMouseExited
+
+    private void lblAlumnosMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblAlumnosMouseEntered
+    {//GEN-HEADEREND:event_lblAlumnosMouseEntered
+        lblAlumnos.setBackground(new java.awt.Color(242, 242, 242));
+    }//GEN-LAST:event_lblAlumnosMouseEntered
+
+    private void lblAlumnosMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblAlumnosMouseExited
+    {//GEN-HEADEREND:event_lblAlumnosMouseExited
+        lblAlumnos.setBackground(Color.white);
+    }//GEN-LAST:event_lblAlumnosMouseExited
+
+    private void checkBoxArbolActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_checkBoxArbolActionPerformed
+    {//GEN-HEADEREND:event_checkBoxArbolActionPerformed
+        checkBoxArbol.setSelected(true);
+        chechBoxTabla.setSelected(false);
+        pnlArbol.setVisible(true);
+    }//GEN-LAST:event_checkBoxArbolActionPerformed
+
+    private void chechBoxTablaActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_chechBoxTablaActionPerformed
+    {//GEN-HEADEREND:event_chechBoxTablaActionPerformed
+        checkBoxArbol.setSelected(false);
+        chechBoxTabla.setSelected(true);
+        pnlArbol.setVisible(false);
+    }//GEN-LAST:event_chechBoxTablaActionPerformed
+
+    private void jTree1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jTree1MouseClicked
+    {//GEN-HEADEREND:event_jTree1MouseClicked
+        lblVista.setBackground(Color.white);
+        lblVista.setForeground(Color.black);
+        pnlRadioButton.setVisible(false);
+        b = false;
+        banderAzul = false;
+        banderAzul1 = false;
+        if (!banderAzul1)
+        {
+            lbGrupos.setBackground(new java.awt.Color(0, 153, 255));
+            lbGrupos.setForeground(Color.white);
+        }
+    }//GEN-LAST:event_jTree1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -155,6 +445,20 @@ public class VtnAdmin extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox chechBoxTabla;
+    private javax.swing.JCheckBox checkBoxArbol;
+    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JTree jTree1;
+    private javax.swing.JLabel lbGrupos;
+    private javax.swing.JLabel lblAlumnos;
+    private javax.swing.JLabel lblVista;
     private javax.swing.JPanel panelRaiz;
+    private javax.swing.JPanel pnlAlumnos;
+    private javax.swing.JScrollPane pnlArbol;
+    private javax.swing.JPanel pnlGrupos;
+    private javax.swing.JPanel pnlMenu;
+    private javax.swing.JPanel pnlRadioButton;
+    private javax.swing.JPanel pnlSecundario;
+    private javax.swing.JPanel pnlVista;
     // End of variables declaration//GEN-END:variables
 }
