@@ -210,25 +210,27 @@ public class VtnPrincipal extends javax.swing.JFrame
             pnlRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlRegistroLayout.createSequentialGroup()
                 .addGap(68, 68, 68)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addComponent(jLabel5)
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         pnlRegistroLayout.setVerticalGroup(
             pnlRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlRegistroLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGap(53, 53, 53)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         contendorBotones.add(pnlRegistro);
 
         pnlDescripcionAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        pnlDescripcionAdmin.setForeground(new java.awt.Color(255, 255, 255));
 
         jScrollPane2.setBorder(null);
+        jScrollPane2.setForeground(new java.awt.Color(204, 204, 204));
 
-        listDescripcionAdmin.setBackground(new java.awt.Color(255, 255, 255));
         listDescripcionAdmin.setBorder(null);
+        listDescripcionAdmin.setForeground(new java.awt.Color(178, 169, 169));
         listDescripcionAdmin.setModel(new javax.swing.AbstractListModel<String>()
         {
             String[] strings = { "-Regitro grupos", "-Modificar/Editar", "-Consulta de aluimnos" };
@@ -263,7 +265,6 @@ public class VtnPrincipal extends javax.swing.JFrame
         jScrollPane1.setBorder(null);
         jScrollPane1.setEnabled(false);
 
-        listDescripcionRegistro.setBackground(new java.awt.Color(255, 255, 255));
         listDescripcionRegistro.setBorder(null);
         listDescripcionRegistro.setModel(new javax.swing.AbstractListModel<String>()
         {
@@ -332,7 +333,7 @@ public class VtnPrincipal extends javax.swing.JFrame
 
     private void formWindowOpened(java.awt.event.WindowEvent evt)//GEN-FIRST:event_formWindowOpened
     {//GEN-HEADEREND:event_formWindowOpened
-        lblTitulo.setText("Sistema de control 'Halcoalberca'");
+        lblTitulo.setText("Sistema de control Halcoalberca");
     }//GEN-LAST:event_formWindowOpened
 
     private void pnlRegistroMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnlRegistroMouseExited
