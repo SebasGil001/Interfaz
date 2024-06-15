@@ -208,6 +208,10 @@ public class VtnPrincipal extends javax.swing.JFrame
         pnlRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlRegistro.addMouseListener(new java.awt.event.MouseAdapter()
         {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                pnlRegistroMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
                 pnlRegistroMouseEntered(evt);
@@ -423,6 +427,11 @@ public class VtnPrincipal extends javax.swing.JFrame
     {//GEN-HEADEREND:event_lblMinimizarMouseClicked
         this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_lblMinimizarMouseClicked
+
+    private void pnlRegistroMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnlRegistroMouseClicked
+    {//GEN-HEADEREND:event_pnlRegistroMouseClicked
+        
+    }//GEN-LAST:event_pnlRegistroMouseClicked
 
     /**
      * @param args the command line arguments
