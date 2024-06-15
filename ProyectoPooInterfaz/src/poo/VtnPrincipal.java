@@ -6,6 +6,7 @@ package poo;
 
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -16,6 +17,7 @@ public class VtnPrincipal extends javax.swing.JFrame
 
     int xMouse;
     int yMouse;
+    public static MetodosMenu m= new MetodosMenu();
 //    Object[] opciones = {"Grupos",
 //                        "Alumnos",
 //                        "Ayuda..."};
@@ -26,6 +28,23 @@ public class VtnPrincipal extends javax.swing.JFrame
     public VtnPrincipal()
     {
         initComponents();
+    }
+
+    public static boolean validaCajasnoVacias(Object... jts)
+    {
+        boolean bandera = true;
+        for (Object x : jts)
+        {
+            if (x instanceof JTextField caja)
+            {
+                if (caja.getText().equals(""))
+                {
+                    bandera = false;
+                    break;
+                }
+            }
+        }
+        return bandera;
     }
 
     /**
@@ -339,7 +358,7 @@ public class VtnPrincipal extends javax.swing.JFrame
     private void pnlRegistroMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnlRegistroMouseExited
     {//GEN-HEADEREND:event_pnlRegistroMouseExited
         plnDescripcionRegistro.setVisible(false);
-        pnlRegistro.setBorder(new javax.swing.border.EmptyBorder(0,0,0,0));
+        pnlRegistro.setBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0));
     }//GEN-LAST:event_pnlRegistroMouseExited
 
     private void pnlRegistroMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnlRegistroMouseEntered
@@ -347,10 +366,10 @@ public class VtnPrincipal extends javax.swing.JFrame
         plnDescripcionRegistro.setVisible(true);
         pnlRegistro.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(51, 51, 51), new java.awt.Color(0, 51, 51), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
     }//GEN-LAST:event_pnlRegistroMouseEntered
-    
+
     private void pnlAdministracionMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnlAdministracionMouseExited
     {//GEN-HEADEREND:event_pnlAdministracionMouseExited
-        pnlAdministracion.setBorder(new javax.swing.border.EmptyBorder(0,0,0,0));
+        pnlAdministracion.setBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0));
         pnlDescripcionAdmin.setVisible(false);
     }//GEN-LAST:event_pnlAdministracionMouseExited
 
