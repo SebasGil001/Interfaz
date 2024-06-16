@@ -227,6 +227,13 @@ public class VtnPrincipal extends javax.swing.JFrame
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Registro");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlRegistroLayout = new javax.swing.GroupLayout(pnlRegistro);
         pnlRegistro.setLayout(pnlRegistroLayout);
@@ -433,6 +440,11 @@ public class VtnPrincipal extends javax.swing.JFrame
     {//GEN-HEADEREND:event_pnlRegistroMouseClicked
         new VtnRegistroAlum().setVisible(true);
     }//GEN-LAST:event_pnlRegistroMouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel5MouseClicked
+    {//GEN-HEADEREND:event_jLabel5MouseClicked
+        new VtnRegistroAlum().setVisible(true);
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
