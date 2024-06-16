@@ -7,7 +7,7 @@ package poo;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import pnlsRegistro.VtnRegistroAlum;
+import pnlsRegistro.VtnRegistroAlumno;
 
 /**
  *
@@ -29,6 +29,7 @@ public class VtnPrincipal extends javax.swing.JFrame
     public VtnPrincipal()
     {
         initComponents();
+        
     }
 
     public static boolean validaCajasnoVacias(Object... jts)
@@ -431,7 +432,8 @@ public class VtnPrincipal extends javax.swing.JFrame
 
     private void pnlRegistroMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnlRegistroMouseClicked
     {//GEN-HEADEREND:event_pnlRegistroMouseClicked
-        new VtnRegistroAlum().setVisible(true);
+//        new VtnRegistroAlum().setVisible(true);
+        new VtnRegistro().setVisible(true);
     }//GEN-LAST:event_pnlRegistroMouseClicked
 
     /**
