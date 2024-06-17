@@ -30,10 +30,10 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
     {
 
         raizInfoConsulta = new javax.swing.JPanel();
-        panelInfoAlum = new pnlsConsulta.PanelRound();
-        panelFotoAlumno = new pnlsConsulta.PanelRound();
+        panelInfoAlum = new pnlsConsulta.PanelRedondo();
+        panelFotoAlumno = new pnlsConsulta.PanelRedondo();
         fotoAlumno = new javax.swing.JLabel();
-        panelRound1 = new pnlsConsulta.PanelRound();
+        panelRound1 = new pnlsConsulta.PanelRedondo();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -41,9 +41,9 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        panelInfoGrupo = new pnlsConsulta.PanelRound();
+        panelInfoGrupo = new pnlsConsulta.PanelRedondo();
         jLabel9 = new javax.swing.JLabel();
-        panelSecundarioGrupo = new pnlsConsulta.PanelRound();
+        panelSecundarioGrupo = new pnlsConsulta.PanelRedondo();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -52,15 +52,15 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        raizInfoConsulta.setBackground(new java.awt.Color(204, 204, 204));
+        raizInfoConsulta.setBackground(new java.awt.Color(247, 245, 230));
 
-        panelInfoAlum.setBackground(new java.awt.Color(18, 179, 171));
+        panelInfoAlum.setBackground(new java.awt.Color(51, 58, 86));
         panelInfoAlum.setRoundBottomLeft(50);
         panelInfoAlum.setRoundBottomRight(50);
         panelInfoAlum.setRoundTopLeft(50);
         panelInfoAlum.setRoundTopRight(50);
 
-        panelFotoAlumno.setBackground(new java.awt.Color(255, 255, 255));
+        panelFotoAlumno.setBackground(new java.awt.Color(232, 232, 232));
         panelFotoAlumno.setRoundBottomLeft(50);
         panelFotoAlumno.setRoundBottomRight(50);
         panelFotoAlumno.setRoundTopLeft(50);
@@ -85,38 +85,45 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
                 .addContainerGap())
         );
 
-        panelRound1.setBackground(new java.awt.Color(153, 255, 255));
+        panelRound1.setBackground(new java.awt.Color(82, 101, 143));
         panelRound1.setRoundBottomLeft(50);
         panelRound1.setRoundBottomRight(50);
         panelRound1.setRoundTopLeft(50);
         panelRound1.setRoundTopRight(50);
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel1.setFont(new java.awt.Font("Kailasa", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(232, 232, 232));
         jLabel1.setText("Nombre:");
 
-        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel3.setFont(new java.awt.Font("Kailasa", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(232, 232, 232));
         jLabel3.setText("Teléfono:");
 
-        jLabel4.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel4.setFont(new java.awt.Font("Kailasa", 1, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(232, 232, 232));
         jLabel4.setText("Dirección:");
 
-        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel5.setFont(new java.awt.Font("Kailasa", 1, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(232, 232, 232));
         jLabel5.setText("Correo:");
 
-        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel6.setFont(new java.awt.Font("Kailasa", 1, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(232, 232, 232));
         jLabel6.setText("Nivel:");
 
-        jLabel7.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel7.setFont(new java.awt.Font("Kailasa", 1, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(232, 232, 232));
         jLabel7.setText("Folio:");
 
-        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel8.setFont(new java.awt.Font("Kailasa", 1, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(232, 232, 232));
         jLabel8.setText("Edad:");
 
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
@@ -137,8 +144,8 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
@@ -150,9 +157,9 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
-                .addGap(32, 32, 32))
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout panelInfoAlumLayout = new javax.swing.GroupLayout(panelInfoAlum);
@@ -174,11 +181,11 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
                 .addContainerGap()
                 .addComponent(panelFotoAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(17, 17, 17))
         );
 
-        panelInfoGrupo.setBackground(new java.awt.Color(102, 102, 102));
+        panelInfoGrupo.setBackground(new java.awt.Color(51, 58, 86));
         panelInfoGrupo.setRoundBottomLeft(50);
         panelInfoGrupo.setRoundBottomRight(50);
         panelInfoGrupo.setRoundTopLeft(50);
@@ -186,34 +193,35 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/icons8-grupo-100.png"))); // NOI18N
 
+        panelSecundarioGrupo.setBackground(new java.awt.Color(82, 101, 143));
         panelSecundarioGrupo.setRoundBottomLeft(50);
         panelSecundarioGrupo.setRoundBottomRight(50);
         panelSecundarioGrupo.setRoundTopLeft(50);
         panelSecundarioGrupo.setRoundTopRight(50);
 
-        jLabel2.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(232, 232, 232));
         jLabel2.setText("Clave de grupo inscrito:");
 
-        jLabel10.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel10.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(232, 232, 232));
         jLabel10.setText("Horario:");
 
-        jLabel11.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel11.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel11.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel11.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(232, 232, 232));
         jLabel11.setText("Tipo:");
 
-        jLabel12.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel12.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel12.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel12.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(232, 232, 232));
         jLabel12.setText("Precio:");
 
-        jLabel13.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel13.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel13.setBackground(new java.awt.Color(232, 232, 232));
+        jLabel13.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(232, 232, 232));
         jLabel13.setText("Dia:");
 
         javax.swing.GroupLayout panelSecundarioGrupoLayout = new javax.swing.GroupLayout(panelSecundarioGrupo);
@@ -221,19 +229,19 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
         panelSecundarioGrupoLayout.setHorizontalGroup(
             panelSecundarioGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelSecundarioGrupoLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addGroup(panelSecundarioGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13)
                     .addComponent(jLabel12)
                     .addComponent(jLabel10)
                     .addComponent(jLabel11)
                     .addComponent(jLabel2))
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap(239, Short.MAX_VALUE))
         );
         panelSecundarioGrupoLayout.setVerticalGroup(
             panelSecundarioGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelSecundarioGrupoLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel11)
@@ -243,7 +251,7 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
                 .addComponent(jLabel13)
                 .addGap(16, 16, 16)
                 .addComponent(jLabel12)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelInfoGrupoLayout = new javax.swing.GroupLayout(panelInfoGrupo);
@@ -265,9 +273,9 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
             .addGroup(panelInfoGrupoLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(panelSecundarioGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout raizInfoConsultaLayout = new javax.swing.GroupLayout(raizInfoConsulta);
@@ -277,9 +285,9 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
             .addGroup(raizInfoConsultaLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(panelInfoAlum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelInfoGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         raizInfoConsultaLayout.setVerticalGroup(
             raizInfoConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,7 +296,7 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
                 .addGroup(raizInfoConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panelInfoGrupo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelInfoAlum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         add(raizInfoConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 460));
@@ -310,11 +318,11 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private pnlsConsulta.PanelRound panelFotoAlumno;
-    private pnlsConsulta.PanelRound panelInfoAlum;
-    private pnlsConsulta.PanelRound panelInfoGrupo;
-    private pnlsConsulta.PanelRound panelRound1;
-    private pnlsConsulta.PanelRound panelSecundarioGrupo;
+    private pnlsConsulta.PanelRedondo panelFotoAlumno;
+    private pnlsConsulta.PanelRedondo panelInfoAlum;
+    private pnlsConsulta.PanelRedondo panelInfoGrupo;
+    private pnlsConsulta.PanelRedondo panelRound1;
+    private pnlsConsulta.PanelRedondo panelSecundarioGrupo;
     private javax.swing.JPanel raizInfoConsulta;
     // End of variables declaration//GEN-END:variables
 }

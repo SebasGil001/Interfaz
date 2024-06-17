@@ -29,332 +29,251 @@ public class VtnRegistroInternos extends javax.swing.JPanel
     private void initComponents()
     {
 
-        jPanel1 = new javax.swing.JPanel();
-        raizInternos = new javax.swing.JPanel();
-        nombre2 = new javax.swing.JTextField();
-        btnCancelarRegInterno = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        nombre3 = new javax.swing.JTextField();
-        claveGrupo = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        direccion = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        nombre = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        nombre1 = new javax.swing.JTextField();
+        raizExternos = new javax.swing.JPanel();
+        panelRedondo1 = new pnlsConsulta.PanelRedondo();
+        botonAceptarRegistroExt = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        panelRedondo2 = new pnlsConsulta.PanelRedondo();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        btnAceptarRegInterno = new javax.swing.JButton();
-        semestre = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        numControl = new javax.swing.JTextField();
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 878, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 446, Short.MAX_VALUE)
-        );
+        jTextField8 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(845, 483));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        raizInternos.setBackground(new java.awt.Color(204, 204, 204));
+        raizExternos.setBackground(new java.awt.Color(232, 232, 232));
 
-        nombre2.setBackground(new java.awt.Color(255, 255, 255));
-        nombre2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                nombre2ActionPerformed(evt);
-            }
-        });
+        panelRedondo1.setBackground(new java.awt.Color(82, 101, 143));
+        panelRedondo1.setRoundBottomLeft(50);
+        panelRedondo1.setRoundBottomRight(50);
+        panelRedondo1.setRoundTopLeft(50);
+        panelRedondo1.setRoundTopRight(50);
 
-        btnCancelarRegInterno.setBackground(new java.awt.Color(18, 179, 171));
-        btnCancelarRegInterno.setForeground(new java.awt.Color(0, 0, 0));
-        btnCancelarRegInterno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Cancelar 50.png"))); // NOI18N
-        btnCancelarRegInterno.setText("Cancelar");
-        btnCancelarRegInterno.setBorder(null);
-        btnCancelarRegInterno.setBorderPainted(false);
-        btnCancelarRegInterno.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btnCancelarRegInternoActionPerformed(evt);
-            }
-        });
+        botonAceptarRegistroExt.setBackground(new java.awt.Color(247, 245, 230));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Clave del grupo a inscribir:");
+        jLabel8.setFont(new java.awt.Font("Kailasa", 1, 13)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel8.setText("Registrar");
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Teléfono:");
-
-        nombre3.setBackground(new java.awt.Color(255, 255, 255));
-        nombre3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                nombre3ActionPerformed(evt);
-            }
-        });
-
-        claveGrupo.setBackground(new java.awt.Color(255, 255, 255));
-        claveGrupo.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                claveGrupoActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Nivel:");
-
-        direccion.setBackground(new java.awt.Color(255, 255, 255));
-        direccion.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                direccionActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Nombre:");
-
-        nombre.setBackground(new java.awt.Color(255, 255, 255));
-        nombre.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                nombreActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Correo:");
-
-        nombre1.setBackground(new java.awt.Color(255, 255, 255));
-        nombre1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                nombre1ActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(18, 179, 171));
-        jLabel8.setText("REGISTRO");
-
-        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Direccion:");
-
-        btnAceptarRegInterno.setBackground(new java.awt.Color(18, 179, 171));
-        btnAceptarRegInterno.setForeground(new java.awt.Color(0, 0, 0));
-        btnAceptarRegInterno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Marca de verificación 48 (1).png"))); // NOI18N
-        btnAceptarRegInterno.setText("Aceptar");
-        btnAceptarRegInterno.setBorder(null);
-        btnAceptarRegInterno.setBorderPainted(false);
-        btnAceptarRegInterno.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btnAceptarRegInternoActionPerformed(evt);
-            }
-        });
-
-        semestre.setBackground(new java.awt.Color(255, 255, 255));
-        semestre.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                semestreActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Semestre:");
-
-        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Numero de cotrol:");
-
-        numControl.setBackground(new java.awt.Color(255, 255, 255));
-        numControl.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                numControlActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout raizInternosLayout = new javax.swing.GroupLayout(raizInternos);
-        raizInternos.setLayout(raizInternosLayout);
-        raizInternosLayout.setHorizontalGroup(
-            raizInternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(raizInternosLayout.createSequentialGroup()
-                .addGap(313, 313, 313)
+        javax.swing.GroupLayout botonAceptarRegistroExtLayout = new javax.swing.GroupLayout(botonAceptarRegistroExt);
+        botonAceptarRegistroExt.setLayout(botonAceptarRegistroExtLayout);
+        botonAceptarRegistroExtLayout.setHorizontalGroup(
+            botonAceptarRegistroExtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botonAceptarRegistroExtLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
                 .addComponent(jLabel8)
-                .addGap(291, 291, 291))
-            .addGroup(raizInternosLayout.createSequentialGroup()
-                .addGap(226, 226, 226)
-                .addGroup(raizInternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAceptarRegInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(raizInternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel4)
-                        .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(nombre)
-                        .addComponent(jLabel1)
-                        .addComponent(jLabel2)
-                        .addComponent(jLabel5)
-                        .addComponent(nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel6)
-                        .addComponent(nombre3)
-                        .addComponent(nombre2)
-                        .addComponent(claveGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(raizInternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(raizInternosLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btnCancelarRegInterno, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                        .addGap(291, 291, 291))
-                    .addGroup(raizInternosLayout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addGroup(raizInternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(semestre, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel7)
-                            .addComponent(numControl))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
-        raizInternosLayout.setVerticalGroup(
-            raizInternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(raizInternosLayout.createSequentialGroup()
+        botonAceptarRegistroExtLayout.setVerticalGroup(
+            botonAceptarRegistroExtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botonAceptarRegistroExtLayout.createSequentialGroup()
+                .addContainerGap(8, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addContainerGap())
+        );
+
+        jLabel2.setFont(new java.awt.Font("Kailasa", 0, 18)); // NOI18N
+        jLabel2.setText("Clave de grupo a incribir: ");
+
+        panelRedondo2.setBackground(new java.awt.Color(232, 232, 232));
+        panelRedondo2.setRoundBottomLeft(50);
+        panelRedondo2.setRoundBottomRight(50);
+        panelRedondo2.setRoundTopLeft(50);
+        panelRedondo2.setRoundTopRight(50);
+
+        jLabel1.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel1.setFont(new java.awt.Font("Kailasa", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel1.setText("Nombre: ");
+
+        jLabel3.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel3.setFont(new java.awt.Font("Kailasa", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel3.setText("Numero de control:");
+
+        jLabel4.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel4.setFont(new java.awt.Font("Kailasa", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel4.setText("Correo:");
+
+        jLabel5.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel5.setFont(new java.awt.Font("Kailasa", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel5.setText("Dirección:");
+
+        jLabel6.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel6.setFont(new java.awt.Font("Kailasa", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel6.setText("Teléfono:");
+
+        jLabel7.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel7.setFont(new java.awt.Font("Kailasa", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel7.setText("Nivel:");
+
+        jTextField2.setText("jTextField1");
+
+        jTextField4.setText("jTextField1");
+        jTextField4.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
+        jTextField3.setText("jTextField1");
+
+        jTextField5.setText("jTextField1");
+
+        jTextField6.setText("jTextField1");
+
+        jTextField7.setText("jTextField1");
+
+        jLabel9.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel9.setFont(new java.awt.Font("Kailasa", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel9.setText("Semestre:");
+
+        jTextField8.setText("jTextField1");
+
+        javax.swing.GroupLayout panelRedondo2Layout = new javax.swing.GroupLayout(panelRedondo2);
+        panelRedondo2.setLayout(panelRedondo2Layout);
+        panelRedondo2Layout.setHorizontalGroup(
+            panelRedondo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRedondo2Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(panelRedondo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+                    .addComponent(jTextField6)
+                    .addComponent(jTextField3)
+                    .addComponent(jTextField4)
+                    .addComponent(jTextField2)
+                    .addComponent(jTextField7))
+                .addGap(90, 90, 90)
+                .addGroup(panelRedondo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+        panelRedondo2Layout.setVerticalGroup(
+            panelRedondo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRedondo2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(raizInternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(raizInternosLayout.createSequentialGroup()
+                .addGroup(panelRedondo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelRedondo2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelRedondo2Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(numControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(semestre, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(raizInternosLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(claveGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel5)
+                .addGap(1, 1, 1)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nombre3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(raizInternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAceptarRegInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCancelarRegInterno))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(raizInternos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jTextField1.setText("jTextField1");
+
+        javax.swing.GroupLayout panelRedondo1Layout = new javax.swing.GroupLayout(panelRedondo1);
+        panelRedondo1.setLayout(panelRedondo1Layout);
+        panelRedondo1Layout.setHorizontalGroup(
+            panelRedondo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRedondo1Layout.createSequentialGroup()
+                .addGroup(panelRedondo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRedondo1Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelRedondo1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(panelRedondo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelRedondo1Layout.createSequentialGroup()
+                        .addGap(290, 290, 290)
+                        .addComponent(botonAceptarRegistroExt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(raizInternos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelRedondo1Layout.setVerticalGroup(
+            panelRedondo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRedondo1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(panelRedondo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(panelRedondo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonAceptarRegistroExt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
+
+        javax.swing.GroupLayout raizExternosLayout = new javax.swing.GroupLayout(raizExternos);
+        raizExternos.setLayout(raizExternosLayout);
+        raizExternosLayout.setHorizontalGroup(
+            raizExternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(raizExternosLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(panelRedondo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
+        raizExternosLayout.setVerticalGroup(
+            raizExternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(raizExternosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelRedondo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        add(raizExternos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 460));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nombre2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_nombre2ActionPerformed
-    {//GEN-HEADEREND:event_nombre2ActionPerformed
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField4ActionPerformed
+    {//GEN-HEADEREND:event_jTextField4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nombre2ActionPerformed
-
-    private void btnCancelarRegInternoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnCancelarRegInternoActionPerformed
-    {//GEN-HEADEREND:event_btnCancelarRegInternoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCancelarRegInternoActionPerformed
-
-    private void nombre3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_nombre3ActionPerformed
-    {//GEN-HEADEREND:event_nombre3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombre3ActionPerformed
-
-    private void claveGrupoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_claveGrupoActionPerformed
-    {//GEN-HEADEREND:event_claveGrupoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_claveGrupoActionPerformed
-
-    private void direccionActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_direccionActionPerformed
-    {//GEN-HEADEREND:event_direccionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_direccionActionPerformed
-
-    private void nombreActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_nombreActionPerformed
-    {//GEN-HEADEREND:event_nombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreActionPerformed
-
-    private void nombre1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_nombre1ActionPerformed
-    {//GEN-HEADEREND:event_nombre1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombre1ActionPerformed
-
-    private void btnAceptarRegInternoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnAceptarRegInternoActionPerformed
-    {//GEN-HEADEREND:event_btnAceptarRegInternoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAceptarRegInternoActionPerformed
-
-    private void semestreActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_semestreActionPerformed
-    {//GEN-HEADEREND:event_semestreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_semestreActionPerformed
-
-    private void numControlActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_numControlActionPerformed
-    {//GEN-HEADEREND:event_numControlActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numControlActionPerformed
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAceptarRegInterno;
-    private javax.swing.JButton btnCancelarRegInterno;
-    private javax.swing.JTextField claveGrupo;
-    private javax.swing.JTextField direccion;
+    private javax.swing.JPanel botonAceptarRegistroExt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -364,13 +283,16 @@ public class VtnRegistroInternos extends javax.swing.JPanel
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nombre;
-    private javax.swing.JTextField nombre1;
-    private javax.swing.JTextField nombre2;
-    private javax.swing.JTextField nombre3;
-    private javax.swing.JTextField numControl;
-    private javax.swing.JPanel raizInternos;
-    private javax.swing.JTextField semestre;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private pnlsConsulta.PanelRedondo panelRedondo1;
+    private pnlsConsulta.PanelRedondo panelRedondo2;
+    private javax.swing.JPanel raizExternos;
     // End of variables declaration//GEN-END:variables
 }

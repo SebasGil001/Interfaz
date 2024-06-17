@@ -33,23 +33,23 @@ public class VtnConsulta extends javax.swing.JPanel
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         ingresoNom = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
+        contenidoBusquedas = new javax.swing.JPanel();
 
         setPreferredSize(new java.awt.Dimension(770, 590));
         setSize(new java.awt.Dimension(770, 590));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        raizConsulta.setBackground(new java.awt.Color(204, 204, 204));
+        raizConsulta.setBackground(new java.awt.Color(232, 232, 232));
         raizConsulta.setPreferredSize(new java.awt.Dimension(770, 590));
 
-        jLabel8.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(18, 179, 171));
+        jLabel8.setFont(new java.awt.Font("Kailasa", 1, 48)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 58, 86));
         jLabel8.setText("CONSULTA");
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Nombre del alumno a buscar:");
+        jLabel1.setBackground(new java.awt.Color(82, 101, 143));
+        jLabel1.setFont(new java.awt.Font("Kailasa", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(82, 101, 143));
+        jLabel1.setText("Nombre del alumno");
 
         ingresoNom.addActionListener(new java.awt.event.ActionListener()
         {
@@ -59,60 +59,57 @@ public class VtnConsulta extends javax.swing.JPanel
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.addMouseListener(new java.awt.event.MouseAdapter()
+        contenidoBusquedas.setBackground(new java.awt.Color(232, 232, 232));
+        contenidoBusquedas.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                jPanel1MouseClicked(evt);
+                contenidoBusquedasMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout contenidoBusquedasLayout = new javax.swing.GroupLayout(contenidoBusquedas);
+        contenidoBusquedas.setLayout(contenidoBusquedasLayout);
+        contenidoBusquedasLayout.setHorizontalGroup(
+            contenidoBusquedasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+        contenidoBusquedasLayout.setVerticalGroup(
+            contenidoBusquedasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 393, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout raizConsultaLayout = new javax.swing.GroupLayout(raizConsulta);
         raizConsulta.setLayout(raizConsultaLayout);
         raizConsultaLayout.setHorizontalGroup(
             raizConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, raizConsultaLayout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(ingresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(202, 202, 202))
+            .addComponent(contenidoBusquedas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(raizConsultaLayout.createSequentialGroup()
                 .addGroup(raizConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(raizConsultaLayout.createSequentialGroup()
-                        .addGroup(raizConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(raizConsultaLayout.createSequentialGroup()
-                                .addGap(270, 270, 270)
-                                .addComponent(jLabel8))
-                            .addGroup(raizConsultaLayout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ingresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 191, Short.MAX_VALUE))
+                        .addGap(324, 324, 324)
+                        .addComponent(jLabel1))
                     .addGroup(raizConsultaLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(250, 250, 250)
+                        .addComponent(jLabel8)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         raizConsultaLayout.setVerticalGroup(
             raizConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(raizConsultaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel8)
-                .addGap(48, 48, 48)
-                .addGroup(raizConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(ingresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ingresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(contenidoBusquedas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         add(raizConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 520));
@@ -123,17 +120,17 @@ public class VtnConsulta extends javax.swing.JPanel
         // TODO add your handling code here:
     }//GEN-LAST:event_ingresoNomActionPerformed
 
-    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jPanel1MouseClicked
-    {//GEN-HEADEREND:event_jPanel1MouseClicked
+    private void contenidoBusquedasMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_contenidoBusquedasMouseClicked
+    {//GEN-HEADEREND:event_contenidoBusquedasMouseClicked
         
-    }//GEN-LAST:event_jPanel1MouseClicked
+    }//GEN-LAST:event_contenidoBusquedasMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel contenidoBusquedas;
     private javax.swing.JTextField ingresoNom;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel raizConsulta;
     // End of variables declaration//GEN-END:variables
 }

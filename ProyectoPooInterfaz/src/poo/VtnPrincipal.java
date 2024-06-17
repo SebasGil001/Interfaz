@@ -5,9 +5,14 @@
 package poo;
 
 import java.awt.Color;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
-import pnlsRegistro.VtnRegistroAlumno;
+import pnlsRegistro.VtnRegistroAlumno;  
 
 /**
  *
@@ -18,6 +23,10 @@ public class VtnPrincipal extends javax.swing.JFrame
 
     int xMouse;
     int yMouse;
+    
+    private ImageIcon imagen; 
+    private Icon icono;
+    
     public static MetodosMenu m= new MetodosMenu();
 //    Object[] opciones = {"Grupos",
 //                        "Alumnos",
@@ -29,6 +38,9 @@ public class VtnPrincipal extends javax.swing.JFrame
     public VtnPrincipal()
     {
         initComponents();
+        
+        this.ajustarImagenLabel(this.labelFondoVtnPrincipal, "/Users/sebasgil/NetBeansProjects/Interfaz/ProyectoPooInterfaz/src/recursos/Diseño sin título.png");
+        
         
     }
 
@@ -62,7 +74,6 @@ public class VtnPrincipal extends javax.swing.JFrame
         panelRaiz = new javax.swing.JPanel();
         lblMinimizar = new javax.swing.JLabel();
         lblCerrar = new javax.swing.JLabel();
-        lblTitulo = new javax.swing.JLabel();
         contendorBotones = new javax.swing.JPanel();
         pnlAdministracion = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -74,7 +85,17 @@ public class VtnPrincipal extends javax.swing.JFrame
         plnDescripcionRegistro = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listDescripcionRegistro = new javax.swing.JList<>();
-        jPanel5 = new javax.swing.JPanel();
+        panelFondo = new javax.swing.JPanel();
+        tituloFondo1 = new javax.swing.JLabel();
+        tituloFondo2 = new javax.swing.JLabel();
+        tituloFondo3 = new javax.swing.JLabel();
+        labelFondoVtnPrincipal = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        labelTextoDescripcion = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        labelTextoDescripcion1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Alberca Halcones");
@@ -90,7 +111,7 @@ public class VtnPrincipal extends javax.swing.JFrame
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelRaiz.setBackground(new java.awt.Color(255, 255, 255));
+        panelRaiz.setBackground(new java.awt.Color(247, 245, 230));
         panelRaiz.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         panelRaiz.addMouseMotionListener(new java.awt.event.MouseMotionAdapter()
         {
@@ -155,16 +176,11 @@ public class VtnPrincipal extends javax.swing.JFrame
         });
         panelRaiz.add(lblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 30, 40));
 
-        lblTitulo.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(96, 91, 91));
-        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelRaiz.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 270, 20));
-
-        contendorBotones.setBackground(new java.awt.Color(255, 255, 255));
+        contendorBotones.setBackground(new java.awt.Color(247, 245, 230));
         contendorBotones.setForeground(new java.awt.Color(255, 255, 255));
         contendorBotones.setLayout(new java.awt.GridLayout(2, 2, 40, 10));
 
-        pnlAdministracion.setBackground(new java.awt.Color(255, 255, 255));
+        pnlAdministracion.setBackground(new java.awt.Color(51, 58, 86));
         pnlAdministracion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pnlAdministracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlAdministracion.addMouseListener(new java.awt.event.MouseAdapter()
@@ -183,7 +199,8 @@ public class VtnPrincipal extends javax.swing.JFrame
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Kailasa", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(232, 232, 232));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Administración");
 
@@ -191,22 +208,22 @@ public class VtnPrincipal extends javax.swing.JFrame
         pnlAdministracion.setLayout(pnlAdministracionLayout);
         pnlAdministracionLayout.setHorizontalGroup(
             pnlAdministracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAdministracionLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+            .addGroup(pnlAdministracionLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
                 .addComponent(jLabel1)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         pnlAdministracionLayout.setVerticalGroup(
             pnlAdministracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAdministracionLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(17, 17, 17))
         );
 
         contendorBotones.add(pnlAdministracion);
 
-        pnlRegistro.setBackground(new java.awt.Color(255, 255, 255));
+        pnlRegistro.setBackground(new java.awt.Color(51, 58, 86));
         pnlRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlRegistro.addMouseListener(new java.awt.event.MouseAdapter()
         {
@@ -225,40 +242,49 @@ public class VtnPrincipal extends javax.swing.JFrame
         });
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Kailasa", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(232, 232, 232));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Registro");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlRegistroLayout = new javax.swing.GroupLayout(pnlRegistro);
         pnlRegistro.setLayout(pnlRegistroLayout);
         pnlRegistroLayout.setHorizontalGroup(
             pnlRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlRegistroLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(80, 80, 80)
                 .addComponent(jLabel5)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         pnlRegistroLayout.setVerticalGroup(
             pnlRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlRegistroLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlRegistroLayout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(21, 21, 21))
         );
 
         contendorBotones.add(pnlRegistro);
 
-        pnlDescripcionAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        pnlDescripcionAdmin.setBackground(new java.awt.Color(247, 245, 230));
         pnlDescripcionAdmin.setForeground(new java.awt.Color(255, 255, 255));
 
         jScrollPane2.setBorder(null);
         jScrollPane2.setForeground(new java.awt.Color(204, 204, 204));
 
+        listDescripcionAdmin.setBackground(new java.awt.Color(247, 245, 230));
         listDescripcionAdmin.setBorder(null);
-        listDescripcionAdmin.setForeground(new java.awt.Color(178, 169, 169));
+        listDescripcionAdmin.setForeground(new java.awt.Color(153, 153, 153));
         listDescripcionAdmin.setModel(new javax.swing.AbstractListModel<String>()
         {
-            String[] strings = { "-Regitro grupos", "-Modificar/Editar", "-Consulta de aluimnos", "-Eliminar" };
+            String[] strings = { "-Registrar Grupo", "-Modificar/Editar", "-Administracion de Alumnos", "-Eliminar Grupo/Alumno" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -270,30 +296,30 @@ public class VtnPrincipal extends javax.swing.JFrame
             pnlDescripcionAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDescripcionAdminLayout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 107, Short.MAX_VALUE))
+                .addGap(0, 79, Short.MAX_VALUE))
         );
         pnlDescripcionAdminLayout.setVerticalGroup(
             pnlDescripcionAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDescripcionAdminLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDescripcionAdminLayout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         contendorBotones.add(pnlDescripcionAdmin);
         pnlDescripcionAdmin.setVisible(false);
 
-        plnDescripcionRegistro.setBackground(new java.awt.Color(255, 255, 255));
+        plnDescripcionRegistro.setBackground(new java.awt.Color(247, 245, 230));
         plnDescripcionRegistro.setForeground(new java.awt.Color(255, 255, 255));
         plnDescripcionRegistro.setToolTipText("");
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setEnabled(false);
 
+        listDescripcionRegistro.setBackground(new java.awt.Color(247, 245, 230));
         listDescripcionRegistro.setBorder(null);
         listDescripcionRegistro.setModel(new javax.swing.AbstractListModel<String>()
         {
-            String[] strings = { "-Registro de almno", "-Consultar alumno" };
+            String[] strings = { "-Registrar Alumno", "-Busqueda de Alumno", "-Consulta de información", "(Alumno y Grupo inscrito)" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -307,35 +333,77 @@ public class VtnPrincipal extends javax.swing.JFrame
             plnDescripcionRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(plnDescripcionRegistroLayout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 31, Short.MAX_VALUE))
+                .addGap(0, 36, Short.MAX_VALUE))
         );
         plnDescripcionRegistroLayout.setVerticalGroup(
             plnDescripcionRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(plnDescripcionRegistroLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         contendorBotones.add(plnDescripcionRegistro);
         plnDescripcionRegistro.setVisible(false);
 
-        panelRaiz.add(contendorBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 540, 320));
+        panelRaiz.add(contendorBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 550, 160));
 
-        jPanel5.setPreferredSize(new java.awt.Dimension(320, 550));
+        panelFondo.setBackground(new java.awt.Color(255, 255, 255));
+        panelFondo.setPreferredSize(new java.awt.Dimension(320, 550));
+        panelFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 320, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 559, Short.MAX_VALUE)
-        );
+        tituloFondo1.setBackground(new java.awt.Color(51, 58, 86));
+        tituloFondo1.setFont(new java.awt.Font("Kailasa", 1, 24)); // NOI18N
+        tituloFondo1.setForeground(new java.awt.Color(232, 232, 232));
+        tituloFondo1.setText("Aprende a nadar");
+        panelFondo.add(tituloFondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
-        panelRaiz.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 559));
+        tituloFondo2.setBackground(new java.awt.Color(51, 58, 86));
+        tituloFondo2.setFont(new java.awt.Font("Kailasa", 1, 24)); // NOI18N
+        tituloFondo2.setForeground(new java.awt.Color(232, 232, 232));
+        tituloFondo2.setText("Organizado");
+        panelFondo.add(tituloFondo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, 30));
+
+        tituloFondo3.setBackground(new java.awt.Color(51, 58, 86));
+        tituloFondo3.setFont(new java.awt.Font("Kailasa", 1, 24)); // NOI18N
+        tituloFondo3.setForeground(new java.awt.Color(232, 232, 232));
+        tituloFondo3.setText("Fácil");
+        panelFondo.add(tituloFondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 90, 30));
+        panelFondo.add(labelFondoVtnPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 334, 553));
+
+        panelRaiz.add(panelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 559));
+
+        jLabel3.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel3.setFont(new java.awt.Font("Kailasa", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel3.setText("TecNM");
+        panelRaiz.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 250, -1));
+
+        jLabel2.setBackground(new java.awt.Color(51, 58, 86));
+        jLabel2.setFont(new java.awt.Font("Charter", 1, 55)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel2.setText("Bienvenido");
+        panelRaiz.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, -1, -1));
+
+        labelTextoDescripcion.setFont(new java.awt.Font("Charter", 1, 18)); // NOI18N
+        labelTextoDescripcion.setForeground(new java.awt.Color(51, 58, 86));
+        labelTextoDescripcion.setText("Administra grupos,");
+        panelRaiz.add(labelTextoDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Charter", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel4.setText("registra alumnos y disfruta de un diseño moderno y funcional .");
+        panelRaiz.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Kailasa", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 58, 86));
+        jLabel6.setText("Selecciona una opción:");
+        panelRaiz.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, -1, 20));
+
+        labelTextoDescripcion1.setBackground(new java.awt.Color(247, 245, 230));
+        labelTextoDescripcion1.setFont(new java.awt.Font("Charter", 1, 18)); // NOI18N
+        labelTextoDescripcion1.setForeground(new java.awt.Color(51, 58, 86));
+        labelTextoDescripcion1.setText("Simplifica la gestión de clases de manera intuitiva.");
+        panelRaiz.add(labelTextoDescripcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, -1));
 
         getContentPane().add(panelRaiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -5, 930, 560));
 
@@ -358,7 +426,7 @@ public class VtnPrincipal extends javax.swing.JFrame
 
     private void formWindowOpened(java.awt.event.WindowEvent evt)//GEN-FIRST:event_formWindowOpened
     {//GEN-HEADEREND:event_formWindowOpened
-        lblTitulo.setText("Sistema de control Halcoalberca");
+//        lblTitulo.setText("Sistema de control Halcoalberca");
     }//GEN-LAST:event_formWindowOpened
 
     private void pnlRegistroMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnlRegistroMouseExited
@@ -436,6 +504,11 @@ public class VtnPrincipal extends javax.swing.JFrame
         new VtnRegistro().setVisible(true);
     }//GEN-LAST:event_pnlRegistroMouseClicked
 
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel5MouseClicked
+    {//GEN-HEADEREND:event_jLabel5MouseClicked
+        new VtnRegistro().setVisible(true);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -481,23 +554,41 @@ public class VtnPrincipal extends javax.swing.JFrame
             }
         });
     }
+    
+    private void ajustarImagenLabel (JLabel lbl, String rutaImagen)
+    {
+        this.imagen = new ImageIcon(rutaImagen);
+        this.icono = new ImageIcon(this.imagen.getImage().getScaledInstance(lbl.getWidth(), lbl.getHeight(), Image.SCALE_DEFAULT));
+        
+        lbl.setIcon(this.icono);
+        this.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel contendorBotones;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel labelFondoVtnPrincipal;
+    private javax.swing.JLabel labelTextoDescripcion;
+    private javax.swing.JLabel labelTextoDescripcion1;
     private javax.swing.JLabel lblCerrar;
     private javax.swing.JLabel lblMinimizar;
-    private javax.swing.JLabel lblTitulo;
     private javax.swing.JList<String> listDescripcionAdmin;
     private javax.swing.JList<String> listDescripcionRegistro;
+    private javax.swing.JPanel panelFondo;
     private javax.swing.JPanel panelRaiz;
     private javax.swing.JPanel plnDescripcionRegistro;
     private javax.swing.JPanel pnlAdministracion;
     private javax.swing.JPanel pnlDescripcionAdmin;
     private javax.swing.JPanel pnlRegistro;
+    private javax.swing.JLabel tituloFondo1;
+    private javax.swing.JLabel tituloFondo2;
+    private javax.swing.JLabel tituloFondo3;
     // End of variables declaration//GEN-END:variables
 }

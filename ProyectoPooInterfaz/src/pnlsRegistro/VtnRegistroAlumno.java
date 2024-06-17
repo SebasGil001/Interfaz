@@ -5,6 +5,9 @@
 package pnlsRegistro;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,19 +19,24 @@ public class VtnRegistroAlumno extends javax.swing.JPanel
     /**
      * Creates new form VtnRegistroAlumno
      */
+    private Color colorOriginalBtnExt;
+    private Color colorOriginalBtnInt;
+
+    private ImageIcon imagen;
+    private Icon icono;
+
     public VtnRegistroAlumno()
     {
         initComponents();
-        
-        VtnRegistroExternos v1 = new VtnRegistroExternos(); 
-        v1.setSize(810,435);
-        v1.setLocation(0,0);
-        
-        contenido.removeAll(); 
-        contenido.add(v1,BorderLayout.CENTER); 
-        contenido.revalidate(); 
-        contenido.repaint();
 
+//        VtnRegistroExternos v1 = new VtnRegistroExternos(); 
+//        v1.setSize(810,435);
+//        v1.setLocation(0,0);
+//        
+//        contenido.removeAll(); 
+//        contenido.add(v1,BorderLayout.CENTER); 
+//        contenido.revalidate(); 
+//        contenido.repaint();
     }
 
     /**
@@ -41,38 +49,37 @@ public class VtnRegistroAlumno extends javax.swing.JPanel
     private void initComponents()
     {
 
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         contenido = new javax.swing.JPanel();
+        encabezadoRegistro = new javax.swing.JLabel();
+        botonOpcionInterno = new pnlsConsulta.PanelRedondo();
+        iconInterno = new javax.swing.JLabel();
+        tituloBotonInt = new javax.swing.JLabel();
+        botonOpcionExterno = new pnlsConsulta.PanelRedondo();
+        iconExterno = new javax.swing.JLabel();
+        tituloBotonExt = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        setPreferredSize(new java.awt.Dimension(780, 620));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(820, 520));
 
-        jButton1.setText("Interno");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
-                jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Externo");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
-                jButton2MouseClicked(evt);
-            }
-        });
+        contenido.setBackground(new java.awt.Color(255, 255, 255));
+        contenido.setMinimumSize(new java.awt.Dimension(820, 544));
 
         javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
         contenido.setLayout(contenidoLayout);
@@ -82,7 +89,107 @@ public class VtnRegistroAlumno extends javax.swing.JPanel
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 435, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
+        );
+
+        encabezadoRegistro.setBackground(new java.awt.Color(51, 58, 86));
+        encabezadoRegistro.setFont(new java.awt.Font("Kailasa", 1, 13)); // NOI18N
+        encabezadoRegistro.setForeground(new java.awt.Color(51, 58, 86));
+        encabezadoRegistro.setText("Selecciona el tipo de alumno:");
+
+        botonOpcionInterno.setBackground(new java.awt.Color(82, 101, 143));
+        botonOpcionInterno.setRoundBottomLeft(50);
+        botonOpcionInterno.setRoundBottomRight(50);
+        botonOpcionInterno.setRoundTopLeft(50);
+        botonOpcionInterno.setRoundTopRight(50);
+        botonOpcionInterno.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                botonOpcionInternoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                botonOpcionInternoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                botonOpcionInternoMouseExited(evt);
+            }
+        });
+
+        iconInterno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/icons8-student-male-40.png"))); // NOI18N
+        iconInterno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        tituloBotonInt.setFont(new java.awt.Font("Kailasa", 0, 14)); // NOI18N
+        tituloBotonInt.setForeground(new java.awt.Color(232, 232, 232));
+        tituloBotonInt.setText("Interno");
+        tituloBotonInt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout botonOpcionInternoLayout = new javax.swing.GroupLayout(botonOpcionInterno);
+        botonOpcionInterno.setLayout(botonOpcionInternoLayout);
+        botonOpcionInternoLayout.setHorizontalGroup(
+            botonOpcionInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botonOpcionInternoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(iconInterno)
+                .addGap(18, 18, 18)
+                .addComponent(tituloBotonInt, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        botonOpcionInternoLayout.setVerticalGroup(
+            botonOpcionInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(iconInterno, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+            .addComponent(tituloBotonInt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        botonOpcionExterno.setBackground(new java.awt.Color(82, 101, 143));
+        botonOpcionExterno.setRoundBottomLeft(50);
+        botonOpcionExterno.setRoundBottomRight(50);
+        botonOpcionExterno.setRoundTopLeft(50);
+        botonOpcionExterno.setRoundTopRight(50);
+        botonOpcionExterno.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                botonOpcionExternoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                botonOpcionExternoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                botonOpcionExternoMouseExited(evt);
+            }
+        });
+
+        iconExterno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/icons8-global-citizen-40.png"))); // NOI18N
+        iconExterno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        tituloBotonExt.setFont(new java.awt.Font("Kailasa", 0, 14)); // NOI18N
+        tituloBotonExt.setForeground(new java.awt.Color(232, 232, 232));
+        tituloBotonExt.setText("Externo");
+        tituloBotonExt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout botonOpcionExternoLayout = new javax.swing.GroupLayout(botonOpcionExterno);
+        botonOpcionExterno.setLayout(botonOpcionExternoLayout);
+        botonOpcionExternoLayout.setHorizontalGroup(
+            botonOpcionExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botonOpcionExternoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(iconExterno)
+                .addGap(18, 18, 18)
+                .addComponent(tituloBotonExt, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+        botonOpcionExternoLayout.setVerticalGroup(
+            botonOpcionExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(iconExterno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botonOpcionExternoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tituloBotonExt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -90,78 +197,95 @@ public class VtnRegistroAlumno extends javax.swing.JPanel
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(206, 206, 206)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(273, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(309, 309, 309)
+                        .addComponent(encabezadoRegistro))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(225, 225, 225)
+                        .addComponent(botonOpcionExterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(botonOpcionInterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(216, Short.MAX_VALUE))
+            .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(encabezadoRegistro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botonOpcionInterno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonOpcionExterno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 620));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jButton1MouseClicked
-    {//GEN-HEADEREND:event_jButton1MouseClicked
-        
-        VtnRegistroExternos regEx = new VtnRegistroExternos(); 
-        regEx.setSize(810,435);
-        regEx.setLocation(0,0);
+    private void botonOpcionExternoMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonOpcionExternoMouseEntered
+    {//GEN-HEADEREND:event_botonOpcionExternoMouseEntered
+        colorOriginalBtnExt = botonOpcionExterno.getBackground();
+        botonOpcionExterno.setBackground(colorOriginalBtnExt.darker());
+    }//GEN-LAST:event_botonOpcionExternoMouseEntered
+
+    private void botonOpcionExternoMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonOpcionExternoMouseExited
+    {//GEN-HEADEREND:event_botonOpcionExternoMouseExited
+        botonOpcionExterno.setBackground(colorOriginalBtnExt);
+    }//GEN-LAST:event_botonOpcionExternoMouseExited
+
+    private void botonOpcionInternoMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonOpcionInternoMouseEntered
+    {//GEN-HEADEREND:event_botonOpcionInternoMouseEntered
+        colorOriginalBtnInt = botonOpcionInterno.getBackground();
+        botonOpcionInterno.setBackground(colorOriginalBtnInt.darker());
+    }//GEN-LAST:event_botonOpcionInternoMouseEntered
+
+    private void botonOpcionInternoMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonOpcionInternoMouseExited
+    {//GEN-HEADEREND:event_botonOpcionInternoMouseExited
+        botonOpcionInterno.setBackground(colorOriginalBtnInt);
+    }//GEN-LAST:event_botonOpcionInternoMouseExited
+
+    private void botonOpcionInternoMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonOpcionInternoMouseClicked
+    {//GEN-HEADEREND:event_botonOpcionInternoMouseClicked
+       
+        VtnRegistroInternos mostrarInt = new VtnRegistroInternos(); 
+        mostrarInt.setSize(contenido.getSize());
+        mostrarInt.setLocation(0,0);
         
         contenido.removeAll(); 
-        contenido.add(regEx,BorderLayout.CENTER); 
+        contenido.add(mostrarInt,BorderLayout.CENTER); 
         contenido.revalidate(); 
         contenido.repaint();
-
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jButton2MouseClicked
-    {//GEN-HEADEREND:event_jButton2MouseClicked
         
-        VtnRegistroInternos regInt = new VtnRegistroInternos(); 
-        regInt.setSize(810,435);
-        regInt.setLocation(0,0);
+    }//GEN-LAST:event_botonOpcionInternoMouseClicked
+
+    private void botonOpcionExternoMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonOpcionExternoMouseClicked
+    {//GEN-HEADEREND:event_botonOpcionExternoMouseClicked
+        
+        VtnRegistroExternos mostrarExt = new VtnRegistroExternos(); 
+        
+        mostrarExt.setLocation(0,0);
         
         contenido.removeAll(); 
-        contenido.add(regInt,BorderLayout.CENTER); 
+        contenido.add(mostrarExt,BorderLayout.CENTER); 
         contenido.revalidate(); 
         contenido.repaint();
-
-    }//GEN-LAST:event_jButton2MouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
-    {//GEN-HEADEREND:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonOpcionExternoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private pnlsConsulta.PanelRedondo botonOpcionExterno;
+    private pnlsConsulta.PanelRedondo botonOpcionInterno;
     private javax.swing.JPanel contenido;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel encabezadoRegistro;
+    private javax.swing.JLabel iconExterno;
+    private javax.swing.JLabel iconInterno;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel tituloBotonExt;
+    private javax.swing.JLabel tituloBotonInt;
     // End of variables declaration//GEN-END:variables
 }

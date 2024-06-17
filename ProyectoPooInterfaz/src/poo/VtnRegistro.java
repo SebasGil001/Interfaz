@@ -6,6 +6,10 @@ package poo;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import pnlsConsulta.VtnConsulta;
 import pnlsRegistro.VtnRegistroAlumno;
 
@@ -19,6 +23,9 @@ public class VtnRegistro extends javax.swing.JFrame
     private Color colorOriginalJPanel3;
     private Color colorOriginalJPanel4;
     private Color colorOriginalJPanel5;
+
+    private ImageIcon imagen;
+    private Icon icono;
 
     /**
      * Creates new form VtnRegistro
@@ -37,7 +44,7 @@ public class VtnRegistro extends javax.swing.JFrame
 //        contenido.repaint();
         this.setLocationRelativeTo(null);
 
-
+       
     }
 
     /**
@@ -52,19 +59,18 @@ public class VtnRegistro extends javax.swing.JFrame
 
         panelRaiz = new javax.swing.JPanel();
         pnlMenuRegistro = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         botonRegistrarAlum = new javax.swing.JPanel();
-        iconRegistro1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        tituloBotonReg = new javax.swing.JLabel();
+        iconBtnReg = new javax.swing.JLabel();
         botonConsultarAlum = new javax.swing.JPanel();
-        iconBusqueda = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        iconBusqueda = new javax.swing.JLabel();
         botonSalida = new javax.swing.JPanel();
-        iconSalida = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        pnlEncabezadoRegistro = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        iconSalida = new javax.swing.JLabel();
+        encabezadoPanelMenu = new javax.swing.JLabel();
+        tituloBotonReg2 = new javax.swing.JLabel();
+        tituloBotonReg1 = new javax.swing.JLabel();
         contenido = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -73,17 +79,10 @@ public class VtnRegistro extends javax.swing.JFrame
         panelRaiz.setBackground(new java.awt.Color(255, 255, 255));
         panelRaiz.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnlMenuRegistro.setBackground(new java.awt.Color(0, 197, 152));
+        pnlMenuRegistro.setBackground(new java.awt.Color(51, 58, 86));
         pnlMenuRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Natación icono 96.png"))); // NOI18N
-        jLabel2.setText("Nom Escuela");
-        pnlMenuRegistro.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 90, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/icons8-circulo-110.png"))); // NOI18N
-        pnlMenuRegistro.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, -1));
-
-        botonRegistrarAlum.setBackground(new java.awt.Color(18, 179, 171));
+        botonRegistrarAlum.setBackground(new java.awt.Color(82, 101, 143));
         botonRegistrarAlum.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonRegistrarAlum.addMouseListener(new java.awt.event.MouseAdapter()
         {
@@ -101,34 +100,38 @@ public class VtnRegistro extends javax.swing.JFrame
             }
         });
 
-        iconRegistro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/icons8-añadir-usuario-masculino-64.png"))); // NOI18N
+        tituloBotonReg.setBackground(new java.awt.Color(255, 255, 255));
+        tituloBotonReg.setFont(new java.awt.Font("Kailasa", 0, 14)); // NOI18N
+        tituloBotonReg.setForeground(new java.awt.Color(232, 232, 232));
+        tituloBotonReg.setText("Registrar alumno");
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Registrar alumno");
+        iconBtnReg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Añadir usuario masculino 30.png"))); // NOI18N
 
         javax.swing.GroupLayout botonRegistrarAlumLayout = new javax.swing.GroupLayout(botonRegistrarAlum);
         botonRegistrarAlum.setLayout(botonRegistrarAlumLayout);
         botonRegistrarAlumLayout.setHorizontalGroup(
             botonRegistrarAlumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botonRegistrarAlumLayout.createSequentialGroup()
-                .addComponent(iconRegistro1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(iconBtnReg, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(tituloBotonReg)
+                .addGap(16, 16, 16))
         );
         botonRegistrarAlumLayout.setVerticalGroup(
             botonRegistrarAlumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iconRegistro1)
             .addGroup(botonRegistrarAlumLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel3))
+                .addGroup(botonRegistrarAlumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(iconBtnReg, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(botonRegistrarAlumLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(tituloBotonReg)))
+                .addGap(15, 15, 15))
         );
 
-        pnlMenuRegistro.add(botonRegistrarAlum, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 200, -1));
+        pnlMenuRegistro.add(botonRegistrarAlum, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 200, 50));
 
-        botonConsultarAlum.setBackground(new java.awt.Color(18, 179, 171));
+        botonConsultarAlum.setBackground(new java.awt.Color(82, 101, 143));
         botonConsultarAlum.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonConsultarAlum.addMouseListener(new java.awt.event.MouseAdapter()
         {
@@ -146,11 +149,11 @@ public class VtnRegistro extends javax.swing.JFrame
             }
         });
 
-        iconBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Icono búsqueda 50.png"))); // NOI18N
-
-        jLabel4.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Kailasa", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(232, 232, 232));
         jLabel4.setText("Consultar alumno");
+
+        iconBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Iconos búsqueda 30.png"))); // NOI18N
 
         javax.swing.GroupLayout botonConsultarAlumLayout = new javax.swing.GroupLayout(botonConsultarAlum);
         botonConsultarAlum.setLayout(botonConsultarAlumLayout);
@@ -159,26 +162,24 @@ public class VtnRegistro extends javax.swing.JFrame
             .addGroup(botonConsultarAlumLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(iconBusqueda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addGap(14, 14, 14))
         );
         botonConsultarAlumLayout.setVerticalGroup(
             botonConsultarAlumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botonConsultarAlumLayout.createSequentialGroup()
-                .addGroup(botonConsultarAlumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(botonConsultarAlumLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(iconBusqueda))
-                    .addGroup(botonConsultarAlumLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel4)))
+                .addComponent(iconBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
+            .addGroup(botonConsultarAlumLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlMenuRegistro.add(botonConsultarAlum, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
+        pnlMenuRegistro.add(botonConsultarAlum, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 200, 50));
 
-        botonSalida.setBackground(new java.awt.Color(18, 179, 171));
+        botonSalida.setBackground(new java.awt.Color(82, 101, 143));
         botonSalida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonSalida.addMouseListener(new java.awt.event.MouseAdapter()
         {
@@ -196,82 +197,77 @@ public class VtnRegistro extends javax.swing.JFrame
             }
         });
 
-        iconSalida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Salida 50.png"))); // NOI18N
-
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Kailasa", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(232, 232, 232));
         jLabel5.setText("Salir");
+
+        iconSalida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Salida 30 (1).png"))); // NOI18N
 
         javax.swing.GroupLayout botonSalidaLayout = new javax.swing.GroupLayout(botonSalida);
         botonSalida.setLayout(botonSalidaLayout);
         botonSalidaLayout.setHorizontalGroup(
             botonSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botonSalidaLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addContainerGap()
                 .addComponent(iconSalida)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(38, 38, 38)
                 .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         botonSalidaLayout.setVerticalGroup(
             botonSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(iconSalida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(botonSalidaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(botonSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(iconSalida)
-                    .addGroup(botonSalidaLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel5)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
+                .addComponent(jLabel5)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        pnlMenuRegistro.add(botonSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 200, -1));
+        pnlMenuRegistro.add(botonSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 200, 50));
 
-        panelRaiz.add(pnlMenuRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 705));
+        encabezadoPanelMenu.setBackground(new java.awt.Color(247, 245, 230));
+        encabezadoPanelMenu.setFont(new java.awt.Font("Kailasa", 1, 18)); // NOI18N
+        encabezadoPanelMenu.setForeground(new java.awt.Color(247, 245, 230));
+        encabezadoPanelMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Natación icono 100.png"))); // NOI18N
+        pnlMenuRegistro.add(encabezadoPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 80));
 
-        pnlEncabezadoRegistro.setBackground(new java.awt.Color(13, 169, 217));
+        tituloBotonReg2.setBackground(new java.awt.Color(255, 255, 255));
+        tituloBotonReg2.setFont(new java.awt.Font("Charter", 1, 18)); // NOI18N
+        tituloBotonReg2.setForeground(new java.awt.Color(232, 232, 232));
+        tituloBotonReg2.setText("Natación");
+        pnlMenuRegistro.add(tituloBotonReg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 36)); // NOI18N
-        jLabel1.setText("Sistema de registro y consulta");
+        tituloBotonReg1.setBackground(new java.awt.Color(255, 255, 255));
+        tituloBotonReg1.setFont(new java.awt.Font("Charter", 1, 18)); // NOI18N
+        tituloBotonReg1.setForeground(new java.awt.Color(232, 232, 232));
+        tituloBotonReg1.setText("TEC");
+        pnlMenuRegistro.add(tituloBotonReg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
 
-        javax.swing.GroupLayout pnlEncabezadoRegistroLayout = new javax.swing.GroupLayout(pnlEncabezadoRegistro);
-        pnlEncabezadoRegistro.setLayout(pnlEncabezadoRegistroLayout);
-        pnlEncabezadoRegistroLayout.setHorizontalGroup(
-            pnlEncabezadoRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEncabezadoRegistroLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1)
-                .addContainerGap(162, Short.MAX_VALUE))
-        );
-        pnlEncabezadoRegistroLayout.setVerticalGroup(
-            pnlEncabezadoRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEncabezadoRegistroLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel1)
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
+        panelRaiz.add(pnlMenuRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 620));
 
-        panelRaiz.add(pnlEncabezadoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 0, 780, 120));
+        contenido.setBackground(new java.awt.Color(187, 187, 187));
+        contenido.setMinimumSize(new java.awt.Dimension(780, 620));
+        contenido.setRequestFocusEnabled(false);
 
         javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
         contenido.setLayout(contenidoLayout);
         contenidoLayout.setHorizontalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 770, Short.MAX_VALUE)
+            .addGap(0, 780, Short.MAX_VALUE)
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
+            .addGap(0, 620, Short.MAX_VALUE)
         );
 
-        panelRaiz.add(contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 120, 770, 580));
+        panelRaiz.add(contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 780, 620));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRaiz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -311,14 +307,14 @@ public class VtnRegistro extends javax.swing.JFrame
 
     private void botonSalidaMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonSalidaMouseExited
     {//GEN-HEADEREND:event_botonSalidaMouseExited
-       botonSalida.setBackground(colorOriginalJPanel5);
+        botonSalida.setBackground(colorOriginalJPanel5);
 
     }//GEN-LAST:event_botonSalidaMouseExited
 
     private void botonRegistrarAlumMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonRegistrarAlumMouseClicked
     {//GEN-HEADEREND:event_botonRegistrarAlumMouseClicked
         VtnRegistroAlumno llamadoRegistro = new VtnRegistroAlumno();
-        llamadoRegistro.setSize(759, 478);
+        llamadoRegistro.setSize(780, 620);
         llamadoRegistro.setLocation(0, 0);
 
         contenido.removeAll();
@@ -336,7 +332,7 @@ public class VtnRegistro extends javax.swing.JFrame
     private void botonConsultarAlumMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonConsultarAlumMouseClicked
     {//GEN-HEADEREND:event_botonConsultarAlumMouseClicked
         VtnConsulta llamadoConsulta = new VtnConsulta();
-        llamadoConsulta.setSize(759, 478);
+        llamadoConsulta.setSize(820, 520);
         llamadoConsulta.setLocation(0, 0);
 
         contenido.removeAll();
@@ -391,23 +387,23 @@ public class VtnRegistro extends javax.swing.JFrame
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel botonConsultarAlum;
     private javax.swing.JPanel botonRegistrarAlum;
     private javax.swing.JPanel botonSalida;
     private javax.swing.JPanel contenido;
+    private javax.swing.JLabel encabezadoPanelMenu;
+    private javax.swing.JLabel iconBtnReg;
     private javax.swing.JLabel iconBusqueda;
-    private javax.swing.JLabel iconRegistro1;
     private javax.swing.JLabel iconSalida;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel panelRaiz;
-    private javax.swing.JPanel pnlEncabezadoRegistro;
     private javax.swing.JPanel pnlMenuRegistro;
+    private javax.swing.JLabel tituloBotonReg;
+    private javax.swing.JLabel tituloBotonReg1;
+    private javax.swing.JLabel tituloBotonReg2;
     // End of variables declaration//GEN-END:variables
 }
