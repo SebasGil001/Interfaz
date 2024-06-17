@@ -5,6 +5,7 @@
 package poo;
 
 import java.awt.Color;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import pnlsRegistro.VtnRegistroAlum;
@@ -18,7 +19,7 @@ public class VtnPrincipal extends javax.swing.JFrame
 
     int xMouse;
     int yMouse;
-    public static MetodosMenu m= new MetodosMenu();
+    public static MetodosMenu m = new MetodosMenu();
 //    Object[] opciones = {"Grupos",
 //                        "Alumnos",
 //                        "Ayuda..."};
@@ -44,6 +45,15 @@ public class VtnPrincipal extends javax.swing.JFrame
                     break;
                 }
             }
+            else if (x instanceof JComboBox lista)
+            {
+                if (lista.getSelectedItem().equals(lista.getItemAt(0)))
+                {
+                    bandera=false;
+                    break;
+                }
+            }
+
         }
         return bandera;
     }

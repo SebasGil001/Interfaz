@@ -34,7 +34,7 @@ public class VtnAdmin extends javax.swing.JFrame
 
     public void showP(JPanel p)
     {
-        p.setSize(870, 420);
+        p.setSize(910, 470);
         p.setLocation(0, 0);
         contentP.removeAll();
         contentP.add(p, BorderLayout.CENTER);
@@ -76,7 +76,7 @@ public class VtnAdmin extends javax.swing.JFrame
         lblAlumnos = new javax.swing.JLabel();
         pnlGrupos = new javax.swing.JPanel();
         lbGrupos = new javax.swing.JLabel();
-        contentP = new javax.swing.JPanel();
+        contentP = new extraClases.PanelRound();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Administración");
@@ -235,20 +235,18 @@ public class VtnAdmin extends javax.swing.JFrame
 
         panelRaiz.add(pnlMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 40));
 
-        contentP.setBackground(new java.awt.Color(255, 255, 255));
-
         javax.swing.GroupLayout contentPLayout = new javax.swing.GroupLayout(contentP);
         contentP.setLayout(contentPLayout);
         contentPLayout.setHorizontalGroup(
             contentPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 930, Short.MAX_VALUE)
+            .addGap(0, 910, Short.MAX_VALUE)
         );
         contentPLayout.setVerticalGroup(
             contentPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 470, Short.MAX_VALUE)
         );
 
-        panelRaiz.add(contentP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 930, 490));
+        panelRaiz.add(contentP, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 910, 470));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -256,13 +254,15 @@ public class VtnAdmin extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 930, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelRaiz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(panelRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGap(0, 579, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelRaiz, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelRaiz, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 579, Short.MAX_VALUE))
         );
 
         pack();
@@ -336,7 +336,8 @@ public class VtnAdmin extends javax.swing.JFrame
     }//GEN-LAST:event_pnlGruposMouseExited
 
     private void pnlVistaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlVistaMouseClicked
-        
+        PnlPrecio vtp =new PnlPrecio();
+        showP(vtp);
     }//GEN-LAST:event_pnlVistaMouseClicked
 
     private void pnlVistaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlVistaMouseEntered
@@ -372,7 +373,7 @@ public class VtnAdmin extends javax.swing.JFrame
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel contentP;
+    private extraClases.PanelRound contentP;
     private javax.swing.JLabel lbGrupos;
     private javax.swing.JLabel lblAlumnos;
     private javax.swing.JLabel lblVista;
