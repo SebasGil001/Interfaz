@@ -30,11 +30,13 @@ public class PanelCarga extends javax.swing.JPanel
     {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(243, 245, 248));
         setMaximumSize(new java.awt.Dimension(930, 556));
         setMinimumSize(new java.awt.Dimension(930, 556));
         setPreferredSize(new java.awt.Dimension(930, 556));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(243, 245, 248));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -43,21 +45,18 @@ public class PanelCarga extends javax.swing.JPanel
         jLabel1.setMinimumSize(new java.awt.Dimension(930, 556));
         jLabel1.setOpaque(true);
         jLabel1.setPreferredSize(new java.awt.Dimension(930, 470));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 160, 320));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1007, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
-        );
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Cargando...");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, 410, 80));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
