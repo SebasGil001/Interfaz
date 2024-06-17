@@ -29,14 +29,33 @@ public class VtnConsulta extends javax.swing.JPanel
     private void initComponents()
     {
 
+        contenidoBusquedas = new javax.swing.JPanel();
         raizConsulta = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         ingresoNom = new javax.swing.JTextField();
-        contenidoBusquedas = new javax.swing.JPanel();
+
+        contenidoBusquedas.setBackground(new java.awt.Color(232, 232, 232));
+        contenidoBusquedas.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                contenidoBusquedasMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout contenidoBusquedasLayout = new javax.swing.GroupLayout(contenidoBusquedas);
+        contenidoBusquedas.setLayout(contenidoBusquedasLayout);
+        contenidoBusquedasLayout.setHorizontalGroup(
+            contenidoBusquedasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        contenidoBusquedasLayout.setVerticalGroup(
+            contenidoBusquedasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 393, Short.MAX_VALUE)
+        );
 
         setPreferredSize(new java.awt.Dimension(770, 590));
-        setSize(new java.awt.Dimension(770, 590));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         raizConsulta.setBackground(new java.awt.Color(232, 232, 232));
@@ -59,26 +78,6 @@ public class VtnConsulta extends javax.swing.JPanel
             }
         });
 
-        contenidoBusquedas.setBackground(new java.awt.Color(232, 232, 232));
-        contenidoBusquedas.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
-                contenidoBusquedasMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout contenidoBusquedasLayout = new javax.swing.GroupLayout(contenidoBusquedas);
-        contenidoBusquedas.setLayout(contenidoBusquedasLayout);
-        contenidoBusquedasLayout.setHorizontalGroup(
-            contenidoBusquedasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        contenidoBusquedasLayout.setVerticalGroup(
-            contenidoBusquedasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 393, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout raizConsultaLayout = new javax.swing.GroupLayout(raizConsulta);
         raizConsulta.setLayout(raizConsultaLayout);
         raizConsultaLayout.setHorizontalGroup(
@@ -87,7 +86,6 @@ public class VtnConsulta extends javax.swing.JPanel
                 .addContainerGap(208, Short.MAX_VALUE)
                 .addComponent(ingresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(202, 202, 202))
-            .addComponent(contenidoBusquedas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(raizConsultaLayout.createSequentialGroup()
                 .addGroup(raizConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(raizConsultaLayout.createSequentialGroup()
@@ -107,9 +105,7 @@ public class VtnConsulta extends javax.swing.JPanel
                 .addComponent(ingresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contenidoBusquedas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(403, Short.MAX_VALUE))
         );
 
         add(raizConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 520));

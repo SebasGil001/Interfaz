@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -39,7 +40,7 @@ public class VtnPrincipal extends javax.swing.JFrame
     {
         initComponents();
         
-        this.ajustarImagenLabel(this.labelFondoVtnPrincipal, "/Users/sebasgil/NetBeansProjects/Interfaz/ProyectoPooInterfaz/src/recursos/Diseño sin título.png");
+        this.ajustarImagenLabel(this.labelFondoVtnPrincipal, "D:\\copiaInterfazGil\\src\\recursos\\Diseño sin título.png");
         
         
     }
@@ -54,6 +55,13 @@ public class VtnPrincipal extends javax.swing.JFrame
                 if (caja.getText().equals(""))
                 {
                     bandera = false;
+                    break;
+                }
+            }else if (x instanceof JComboBox lista)
+            {
+                if (lista.getSelectedItem().equals(lista.getItemAt(0)))
+                {
+                    bandera=false;
                     break;
                 }
             }

@@ -50,7 +50,6 @@ public class VtnRegistroExternos extends javax.swing.JPanel
         jTextField1 = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(820, 453));
-        setSize(new java.awt.Dimension(820, 453));
 
         raizExternos.setBackground(new java.awt.Color(232, 232, 232));
         raizExternos.setPreferredSize(new java.awt.Dimension(820, 544));
@@ -242,7 +241,7 @@ public class VtnRegistroExternos extends javax.swing.JPanel
             .addGroup(raizExternosLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addComponent(panelRedondo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -253,7 +252,7 @@ public class VtnRegistroExternos extends javax.swing.JPanel
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(raizExternos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(raizExternos, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

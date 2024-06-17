@@ -260,10 +260,10 @@ public class VtnRegistroInternos extends javax.swing.JPanel
             .addGroup(raizExternosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(panelRedondo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(raizExternos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 460));
+        add(raizExternos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 530));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField4ActionPerformed

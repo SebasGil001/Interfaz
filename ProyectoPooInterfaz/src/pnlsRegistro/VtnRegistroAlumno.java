@@ -251,9 +251,10 @@ public class VtnRegistroAlumno extends javax.swing.JPanel
     private void botonOpcionInternoMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_botonOpcionInternoMouseClicked
     {//GEN-HEADEREND:event_botonOpcionInternoMouseClicked
        
-        VtnRegistroInternos mostrarInt = new VtnRegistroInternos(); 
+        VtnRegistroInternos mostrarInt = new VtnRegistroInternos();
         mostrarInt.setSize(contenido.getSize());
         mostrarInt.setLocation(0,0);
+        
         
         contenido.removeAll(); 
         contenido.add(mostrarInt,BorderLayout.CENTER); 
@@ -268,7 +269,7 @@ public class VtnRegistroAlumno extends javax.swing.JPanel
         VtnRegistroExternos mostrarExt = new VtnRegistroExternos(); 
         
         mostrarExt.setLocation(0,0);
-        
+        mostrarExt.setSize(contenido.getSize());
         contenido.removeAll(); 
         contenido.add(mostrarExt,BorderLayout.CENTER); 
         contenido.revalidate(); 

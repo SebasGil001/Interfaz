@@ -236,7 +236,7 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
                     .addComponent(jLabel10)
                     .addComponent(jLabel11)
                     .addComponent(jLabel2))
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
         panelSecundarioGrupoLayout.setVerticalGroup(
             panelSecundarioGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,7 +287,7 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
                 .addComponent(panelInfoAlum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelInfoGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         raizInfoConsultaLayout.setVerticalGroup(
             raizInfoConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -296,7 +296,7 @@ public class VtnInformacionAluExterno extends javax.swing.JPanel
                 .addGroup(raizInfoConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panelInfoGrupo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelInfoAlum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         add(raizInfoConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 460));
