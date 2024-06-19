@@ -88,7 +88,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
@@ -107,9 +107,9 @@
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Component id="btnAceptar1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jTextArea1" min="-2" pref="92" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="jTextArea1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jTextArea2" min="-2" pref="84" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -125,9 +125,6 @@
               <Color blue="e8" green="e8" red="e8" type="rgb"/>
             </Property>
             <Property name="columns" type="int" value="20"/>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value=" Al presionar actualizar no solo&#xa; cambiara a quienes se inscriban&#xa; posteriormente, cambiara para&#xa; todos los inscritos"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -191,17 +188,11 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Precio Actual"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Precio a cambiar"/>
           </Properties>
         </Component>
@@ -260,9 +251,6 @@
               <Color blue="e8" green="e8" red="e8" type="rgb"/>
             </Property>
             <Property name="columns" type="int" value="20"/>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value=" El precio debe ser mayor a 0  el&#xa; precio para externos sera un 50%&#xa; mas y para internos un 50% menos&#xa; y aplicara a quienes ingresen &#xa; posteriormente&#xa;"/>

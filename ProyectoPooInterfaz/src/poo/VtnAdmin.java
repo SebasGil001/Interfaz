@@ -20,11 +20,11 @@ import javax.swing.Timer;
 public class VtnAdmin extends javax.swing.JFrame
 {
 
-    Color colorActivado = new Color(0, 153, 255);
-    Color colorDesactivado = new Color(255, 255, 255);
-    Color colorHover = new Color(239, 239, 239);
+    Color colorActivado = new Color(82,101,143);
+    Color colorDesactivado = new Color(51,58,86);
+    Color colorHover = colorDesactivado.darker();
     Color colorLetraActivado = new Color(255, 255, 255);
-    Color colorLetraDesactivado = new Color(0, 0, 0);
+    Color colorLetraDesactivado = new Color(255, 255, 255);
     boolean seleccionadoGrupos = true;
     boolean seleccionadoAlumnos = false;
     boolean seleccionadoVista = false;
@@ -44,11 +44,12 @@ public class VtnAdmin extends javax.swing.JFrame
     {
         p.setSize(width, height);
         p.setLocation(0, 0);
-        contentP.removeAll();
-        contentP.add(p, BorderLayout.CENTER);
-        contentP.revalidate();
-        contentP.repaint();
+        panelCarga.removeAll();
+        panelCarga.add(p, BorderLayout.CENTER);
+        panelCarga.revalidate();
+        panelCarga.repaint();
     }
+
     public void showP(JPanel p)
     {
         p.setSize(890, 470);
@@ -241,8 +242,8 @@ public class VtnAdmin extends javax.swing.JFrame
 
         panelRaiz = new javax.swing.JPanel();
         contentSelect = new javax.swing.JPanel();
-        checkBoxTabla = new javax.swing.JCheckBox();
-        checkBoxArbol = new javax.swing.JCheckBox();
+        lblConsultarInternos = new javax.swing.JLabel();
+        lblConsultarExternos = new javax.swing.JLabel();
         pnlMenu = new javax.swing.JPanel();
         pnlVista = new javax.swing.JPanel();
         lblVista = new javax.swing.JLabel();
@@ -280,49 +281,39 @@ public class VtnAdmin extends javax.swing.JFrame
         panelRaiz.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         contentSelect.setBackground(new java.awt.Color(255, 255, 255));
+        contentSelect.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        checkBoxTabla.setBackground(new java.awt.Color(255, 255, 255));
-        checkBoxTabla.setSelected(true);
-        checkBoxTabla.setText("Vista tabla");
-        checkBoxTabla.setBorder(null);
-        checkBoxTabla.setContentAreaFilled(false);
-        checkBoxTabla.addActionListener(new java.awt.event.ActionListener()
+        lblConsultarInternos.setBackground(new java.awt.Color(51, 58, 86));
+        lblConsultarInternos.setForeground(new java.awt.Color(255, 255, 255));
+        lblConsultarInternos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblConsultarInternos.setText("Consultar Internos");
+        lblConsultarInternos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblConsultarInternos.setOpaque(true);
+        lblConsultarInternos.addMouseListener(new java.awt.event.MouseAdapter()
         {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
+            public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                checkBoxTablaActionPerformed(evt);
+                lblConsultarInternosMouseClicked(evt);
             }
         });
+        contentSelect.add(lblConsultarInternos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 234, 40));
 
-        checkBoxArbol.setBackground(new java.awt.Color(255, 255, 255));
-        checkBoxArbol.setText("Vista arbol");
-        checkBoxArbol.setBorder(null);
-        checkBoxArbol.setOpaque(true);
-        checkBoxArbol.addActionListener(new java.awt.event.ActionListener()
+        lblConsultarExternos.setBackground(new java.awt.Color(51, 58, 86));
+        lblConsultarExternos.setForeground(new java.awt.Color(255, 255, 255));
+        lblConsultarExternos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblConsultarExternos.setText("Consulta Externos");
+        lblConsultarExternos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblConsultarExternos.setOpaque(true);
+        lblConsultarExternos.addMouseListener(new java.awt.event.MouseAdapter()
         {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
+            public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                checkBoxArbolActionPerformed(evt);
+                lblConsultarExternosMouseClicked(evt);
             }
         });
+        contentSelect.add(lblConsultarExternos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 234, 40));
 
-        javax.swing.GroupLayout contentSelectLayout = new javax.swing.GroupLayout(contentSelect);
-        contentSelect.setLayout(contentSelectLayout);
-        contentSelectLayout.setHorizontalGroup(
-            contentSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(checkBoxTabla, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(checkBoxArbol, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-        );
-        contentSelectLayout.setVerticalGroup(
-            contentSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentSelectLayout.createSequentialGroup()
-                .addComponent(checkBoxTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkBoxArbol, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12))
-        );
-
-        panelRaiz.add(contentSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(751, 40, 130, 90));
+        panelRaiz.add(contentSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 40, 234, 80));
         contentSelect.setVisible(false);
 
         pnlMenu.setBackground(new java.awt.Color(51, 58, 86));
@@ -331,6 +322,7 @@ public class VtnAdmin extends javax.swing.JFrame
 
         pnlVista.setBackground(new java.awt.Color(51, 58, 86));
         pnlVista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlVista.setMinimumSize(new java.awt.Dimension(161, 40));
         pnlVista.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseClicked(java.awt.event.MouseEvent evt)
@@ -351,7 +343,7 @@ public class VtnAdmin extends javax.swing.JFrame
         lblVista.setBackground(new java.awt.Color(51, 58, 86));
         lblVista.setForeground(new java.awt.Color(255, 255, 255));
         lblVista.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblVista.setText("Vista...");
+        lblVista.setText("Mas...");
         lblVista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblVista.addMouseListener(new java.awt.event.MouseAdapter()
         {
@@ -370,7 +362,7 @@ public class VtnAdmin extends javax.swing.JFrame
         });
         pnlVista.add(lblVista, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 80, 40));
 
-        pnlMenu.add(pnlVista, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 0, 232, 40));
+        pnlMenu.add(pnlVista, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 0, 234, 40));
 
         pnlAlumnos.setBackground(new java.awt.Color(51, 58, 86));
         pnlAlumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -520,6 +512,7 @@ public class VtnAdmin extends javax.swing.JFrame
         );
 
         panelRaiz.add(contentP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 890, 470));
+        contentP.setVisible(false);
 
         panelCarga.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -527,18 +520,18 @@ public class VtnAdmin extends javax.swing.JFrame
         panelCarga.setLayout(panelCargaLayout);
         panelCargaLayout.setHorizontalGroup(
             panelCargaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 880, Short.MAX_VALUE)
+            .addGap(0, 930, Short.MAX_VALUE)
         );
         panelCargaLayout.setVerticalGroup(
             panelCargaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGap(0, 520, Short.MAX_VALUE)
         );
 
-        panelRaiz.add(panelCarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 880, 480));
+        panelRaiz.add(panelCarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 520));
 
         barraProgresoCarga.setBackground(new java.awt.Color(255, 255, 255));
         barraProgresoCarga.setForeground(new java.awt.Color(0, 153, 255));
-        barraProgresoCarga.setMaximum(20);
+        barraProgresoCarga.setMaximum(40);
         barraProgresoCarga.setToolTipText("");
         barraProgresoCarga.setBorder(null);
         panelRaiz.add(barraProgresoCarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 930, 40));
@@ -547,7 +540,7 @@ public class VtnAdmin extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 930, Short.MAX_VALUE)
+            .addGap(0, 931, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panelRaiz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -567,18 +560,20 @@ public class VtnAdmin extends javax.swing.JFrame
 
         PanelCarga1 carga = new PanelCarga1();
         showP(carga, 930, 556);
-        timer = new Timer(20, new ActionListener()
+        timer = new Timer(40, new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
                 num += 1;
-                if (num > 20)
+                if (num > 40)
                 {
                     timer.stop();
                     pnlMenu.setVisible(true);
+                    contentP.setVisible(true);
                     PnlGrupos vtg = new PnlGrupos();
-                    showP(vtg, 870, 470);
+                    showP(vtg);
+                    panelCarga.setVisible(false);
                     barraProgresoCarga.setVisible(false);
                 } else
                 {
@@ -759,7 +754,7 @@ public class VtnAdmin extends javax.swing.JFrame
         contentSelect.setVisible(false);
         cambiarFondoSeleccionado(pnlAlumnos, lblAlumnos, j, l);
         PnlAlumnos vda = new PnlAlumnos();
-        showP(vda, 870, 420);
+        showP(vda);
     }//GEN-LAST:event_lblAlumnosMouseClicked
 
     private void pnlAlumnosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAlumnosMouseExited
@@ -826,17 +821,19 @@ public class VtnAdmin extends javax.swing.JFrame
         cambiarFondoHoverSalida(pnlPrecio, lblPrecio, seleccionadoPrecio);
     }//GEN-LAST:event_lblPrecioMouseExited
 
-    private void checkBoxTablaActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_checkBoxTablaActionPerformed
-    {//GEN-HEADEREND:event_checkBoxTablaActionPerformed
-        checkBoxTabla.setSelected(true);
-        checkBoxArbol.setSelected(false);
-    }//GEN-LAST:event_checkBoxTablaActionPerformed
+    private void lblConsultarInternosMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblConsultarInternosMouseClicked
+    {//GEN-HEADEREND:event_lblConsultarInternosMouseClicked
+        contentSelect.setVisible(false);
+        PnlAlumnosInternos vda = new PnlAlumnosInternos();
+        showP(vda);
+    }//GEN-LAST:event_lblConsultarInternosMouseClicked
 
-    private void checkBoxArbolActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_checkBoxArbolActionPerformed
-    {//GEN-HEADEREND:event_checkBoxArbolActionPerformed
-        checkBoxTabla.setSelected(false);
-        checkBoxArbol.setSelected(true);
-    }//GEN-LAST:event_checkBoxArbolActionPerformed
+    private void lblConsultarExternosMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblConsultarExternosMouseClicked
+    {//GEN-HEADEREND:event_lblConsultarExternosMouseClicked
+        contentSelect.setVisible(false);
+        PnlAlumnosExternos vda = new PnlAlumnosExternos();
+        showP(vda);
+    }//GEN-LAST:event_lblConsultarExternosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -844,12 +841,12 @@ public class VtnAdmin extends javax.swing.JFrame
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JProgressBar barraProgresoCarga;
-    private javax.swing.JCheckBox checkBoxArbol;
-    private javax.swing.JCheckBox checkBoxTabla;
     private javax.swing.JPanel contentP;
     private javax.swing.JPanel contentSelect;
     private javax.swing.JLabel lbGrupos;
     private javax.swing.JLabel lblAlumnos;
+    private javax.swing.JLabel lblConsultarExternos;
+    private javax.swing.JLabel lblConsultarInternos;
     private javax.swing.JLabel lblPrecio;
     private javax.swing.JLabel lblVista;
     private javax.swing.JPanel panelCarga;

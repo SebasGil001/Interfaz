@@ -53,7 +53,6 @@ public class PnlPrecio extends javax.swing.JPanel
 
         jTextArea2.setBackground(new java.awt.Color(232, 232, 232));
         jTextArea2.setColumns(20);
-        jTextArea2.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea2.setRows(5);
         jTextArea2.setText(" Al presionar actualizar no solo\n cambiara a quienes se inscriban\n posteriormente, cambiara para\n todos los inscritos");
         jTextArea2.setBorder(null);
@@ -88,10 +87,8 @@ public class PnlPrecio extends javax.swing.JPanel
                 .addGap(16, 16, 16))
         );
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Precio Actual");
 
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Precio a cambiar");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener()
@@ -134,7 +131,6 @@ public class PnlPrecio extends javax.swing.JPanel
 
         jTextArea1.setBackground(new java.awt.Color(232, 232, 232));
         jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jTextArea1.setText(" El precio debe ser mayor a 0  el\n precio para externos sera un 50%\n mas y para internos un 50% menos\n y aplicara a quienes ingresen \n posteriormente\n");
@@ -217,8 +213,8 @@ public class PnlPrecio extends javax.swing.JPanel
                         .addGap(33, 33, 33)
                         .addComponent(btnAceptar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRedondo1Layout.createSequentialGroup()
-                        .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
+                        .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
                         .addComponent(jTextArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(152, Short.MAX_VALUE))
         );

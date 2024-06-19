@@ -47,7 +47,7 @@ public class VtnRegistroExternos extends javax.swing.JPanel
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setPreferredSize(new java.awt.Dimension(820, 453));
 
@@ -122,9 +122,6 @@ public class VtnRegistroExternos extends javax.swing.JPanel
         jLabel7.setForeground(new java.awt.Color(51, 58, 86));
         jLabel7.setText("Nivel:");
 
-        jTextField2.setText("jTextField1");
-
-        jTextField4.setText("jTextField1");
         jTextField4.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
@@ -132,14 +129,6 @@ public class VtnRegistroExternos extends javax.swing.JPanel
                 jTextField4ActionPerformed(evt);
             }
         });
-
-        jTextField3.setText("jTextField1");
-
-        jTextField5.setText("jTextField1");
-
-        jTextField6.setText("jTextField1");
-
-        jTextField7.setText("jTextField1");
 
         javax.swing.GroupLayout panelRedondo2Layout = new javax.swing.GroupLayout(panelRedondo2);
         panelRedondo2.setLayout(panelRedondo2Layout);
@@ -192,7 +181,8 @@ public class VtnRegistroExternos extends javax.swing.JPanel
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jTextField1.setText("jTextField1");
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selected...", "clv1", "grupo2", "clave23" }));
+        jComboBox1.setOpaque(true);
 
         javax.swing.GroupLayout panelRedondo1Layout = new javax.swing.GroupLayout(panelRedondo1);
         panelRedondo1.setLayout(panelRedondo1Layout);
@@ -204,7 +194,7 @@ public class VtnRegistroExternos extends javax.swing.JPanel
                         .addGap(44, 44, 44)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRedondo1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(panelRedondo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -219,7 +209,7 @@ public class VtnRegistroExternos extends javax.swing.JPanel
                 .addGap(22, 22, 22)
                 .addGroup(panelRedondo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(panelRedondo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -241,7 +231,7 @@ public class VtnRegistroExternos extends javax.swing.JPanel
             .addGroup(raizExternosLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addComponent(panelRedondo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -252,7 +242,7 @@ public class VtnRegistroExternos extends javax.swing.JPanel
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(raizExternos, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
+            .addComponent(raizExternos, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -264,6 +254,7 @@ public class VtnRegistroExternos extends javax.swing.JPanel
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel botonAceptarRegistroExt;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -272,7 +263,6 @@ public class VtnRegistroExternos extends javax.swing.JPanel
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;

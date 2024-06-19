@@ -40,7 +40,7 @@ public class VtnPrincipal extends javax.swing.JFrame
     {
         initComponents();
         
-        this.ajustarImagenLabel(this.labelFondoVtnPrincipal, "D:\\copiaInterfazGil\\src\\recursos\\Diseño sin título.png");
+        this.ajustarImagenLabel(this.labelFondoVtnPrincipal, "C:\\Users\\gerar\\3D Objects\\SP_Interfaz\\Interfaz\\ProyectoPooInterfaz\\src\\recursos\\fondo.png");
         
         
     }
