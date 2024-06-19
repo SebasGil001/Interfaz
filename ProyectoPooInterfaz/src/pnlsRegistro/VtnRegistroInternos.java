@@ -48,7 +48,7 @@ public class VtnRegistroInternos extends javax.swing.JPanel
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox1 = new javax.swing.JComboBox<>();
 
         setPreferredSize(new java.awt.Dimension(845, 483));
@@ -137,6 +137,8 @@ public class VtnRegistroInternos extends javax.swing.JPanel
         jLabel9.setForeground(new java.awt.Color(51, 58, 86));
         jLabel9.setText("Semestre:");
 
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selected", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+
         javax.swing.GroupLayout panelRedondo2Layout = new javax.swing.GroupLayout(panelRedondo2);
         panelRedondo2.setLayout(panelRedondo2Layout);
         panelRedondo2Layout.setHorizontalGroup(
@@ -156,11 +158,11 @@ public class VtnRegistroInternos extends javax.swing.JPanel
                     .addComponent(jTextField4)
                     .addComponent(jTextField2)
                     .addComponent(jTextField7))
-                .addGap(90, 90, 90)
-                .addGroup(panelRedondo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(89, 89, 89)
+                .addGroup(panelRedondo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
         panelRedondo2Layout.setVerticalGroup(
             panelRedondo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,7 +176,7 @@ public class VtnRegistroInternos extends javax.swing.JPanel
                     .addGroup(panelRedondo2Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -241,7 +243,7 @@ public class VtnRegistroInternos extends javax.swing.JPanel
             .addGroup(raizExternosLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addComponent(panelRedondo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         raizExternosLayout.setVerticalGroup(
             raizExternosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,6 +265,7 @@ public class VtnRegistroInternos extends javax.swing.JPanel
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel botonAceptarRegistroExt;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -278,7 +281,6 @@ public class VtnRegistroInternos extends javax.swing.JPanel
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private pnlsConsulta.PanelRedondo panelRedondo1;
     private pnlsConsulta.PanelRedondo panelRedondo2;
     private javax.swing.JPanel raizExternos;
